@@ -3,87 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASIONAL KEBANGSAAN INDONESIA</title>
+
+    <title>Nasional Kebangsaan Indonesia</title>
+
+    <meta name="description" content="Portal literasi dan pemikiran kebangsaan Indonesia tentang persatuan, kedaulatan, dan kemandirian bangsa.">
+
     <link rel="stylesheet" href="style.css">
 
     <script src="daftar-artikel.js" defer></script>
-    <script defer>
-        document.addEventListener("DOMContentLoaded", function () {
-            const wadahArtikel = document.getElementById("article-grid");
-
-            if (!wadahArtikel || typeof daftarArtikel === "undefined") {
-                return;
-            }
-
-            const artikelTerbaru = daftarArtikel.slice(0, 3);
-
-            wadahArtikel.innerHTML = artikelTerbaru.map(function (artikel) {
-                return `
-                    <article class="article-card">
-                        <a href="${artikel.halaman}" class="article-link">
-                            <h2>${artikel.judul}</h2>
-                            <p>${artikel.ringkasan}</p>
-                            <span class="read-more">Baca Selengkapnya →</span>
-                        </a>
-                    </article>
-                `;
-            }).join("");
-        });
-    </script>
+    <script src="beranda.js" defer></script>
 </head>
+
 <body>
 
-<header>
-    <div class="header-inner">
-        <div class="site-title">NASIONAL KEBANGSAAN INDONESIA</div>
-        <div class="site-tagline">PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA</div>
-    </div>
-</header>
+    <!-- HEADER -->
 
-<nav>
-    <a href="index.html" class="home-button active" aria-label="Beranda" title="Beranda">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 10.5L12 3l9 7.5"></path>
-            <path d="M5.5 9.5V21h13V9.5"></path>
-            <path d="M9 21v-7h6v7"></path>
-        </svg>
-    </a>
-    <a href="identitas.html">Identitas</a>
-    <a href="pemikiran.html">Pemikiran</a>
-    <a href="katalog-buku.html">Katalog Buku</a>
-</nav>
+    <header>
+        <div class="header-inner">
 
-<main>
-    <section class="content-section">
-        <div class="container">
+            <div class="site-title">
+                NASIONAL KEBANGSAAN INDONESIA
+            </div>
 
-            <h1 class="section-title">Artikel dan Pemikiran Kebangsaan</h1>
-
-            <p class="section-intro">
-                Ruang literasi dan pemikiran untuk memperkuat persatuan bangsa,
-                menegakkan kedaulatan nasional, serta membangun kemandirian Indonesia.
-            </p>
-
-            <div class="article-grid" id="article-grid">
-                <p>Memuat artikel...</p>
+            <div class="site-tagline">
+                PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
             </div>
 
         </div>
-    </section>
-</main>
+    </header>
 
-<footer>
-    <div class="footer-title">NASIONAL KEBANGSAAN INDONESIA</div>
-    <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
-    <p>&copy; 2026 Nasional Kebangsaan Indonesia</p>
-</footer>
 
-<a href="#" class="back-to-top" aria-label="Kembali ke atas" title="Back to Top">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 19V5"></path>
-        <path d="M5.5 11.5L12 5l6.5 6.5"></path>
-    </svg>
-</a>
+    <!-- NAVIGASI -->
+
+    <nav>
+        <div class="nav-inner">
+
+            <a href="index.html"
+               class="active home-button"
+               aria-label="Beranda"
+               title="Beranda">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 10.5L12 3l9 7.5"></path>
+                    <path d="M5.5 9.5V21h13V9.5"></path>
+                    <path d="M9.5 21v-7h5v7"></path>
+                </svg>
+
+            </a>
+
+            <a href="identitas.html">
+                Identitas
+            </a>
+
+            <a href="pemikiran.html">
+                Pemikiran
+            </a>
+
+            <a href="katalog-buku.html">
+                Katalog Buku
+            </a>
+
+        </div>
+    </nav>
+
+
+    <!-- KONTEN BERANDA -->
+
+    <main>
+
+        <section class="content-section">
+
+            <div class="container">
+
+                <h1 class="section-title">
+                    Artikel dan Pemikiran Kebangsaan
+                </h1>
+
+                <p class="section-intro">
+                    Ruang literasi dan pemikiran untuk memperkuat
+                    persatuan bangsa, menegakkan kedaulatan nasional,
+                    serta membangun kemandirian Indonesia.
+                </p>
+
+                <!-- DAFTAR ARTIKEL OTOMATIS -->
+
+                <div class="article-grid" id="article-grid">
+                    <p>Memuat artikel...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-title">
+            NASIONAL KEBANGSAAN INDONESIA
+        </div>
+
+        <p>
+            Persatuan · Kedaulatan · Kemandirian Bangsa
+        </p>
+
+        <p>
+            &copy; 2026 Nasional Kebangsaan Indonesia
+        </p>
+
+    </footer>
+
+
+    <a href="#" class="back-to-top" aria-label="Kembali ke atas" title="Back to Top">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 19V5"></path>
+            <path d="M5.5 11.5L12 5l6.5 6.5"></path>
+        </svg>
+    </a>
 
 </body>
 </html>
