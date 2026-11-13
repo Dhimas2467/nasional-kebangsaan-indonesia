@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portal literasi dan pemikiran kebangsaan Indonesia yang memuat gagasan tentang persatuan dan kesatuan bangsa, kedaulatan nasional, kemandirian bangsa, serta dokumentasi artikel, opini, dan katalog buku kebangsaan.">
+<meta name="theme-color" content="#781d26">
+<title>NASIONAL KEBANGSAAN INDONESIA</title>
+
+<style>
+:root {
+  --red: #781d26;
+  --red-dark: #50121a;
+  --gold: #c9a45c;
+  --navy: #172a40;
+  --cream: #f7f4ed;
+  --white: #ffffff;
+  --text: #292929;
+  --muted: #777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: var(--red-dark);
+  color: white;
+  border-bottom: 3px solid var(--gold);
+}
+
+.topline {
+  height: 5px;
+  background: linear-gradient(
+    to right, #c52b35 0 50%, #ffffff 50% 100%
+  );
+}
+
+.header-inner {
+  max-width: 1150px;
+  margin: auto;
+  padding: 28px 22px;
+  text-align: center;
+}
+
+.brand {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.header-inner h1 {
+  font-size: clamp(27px, 5vw, 43px);
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin: 12px 0;
+}
+
+.tagline {
+  color: #eee1d1;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--gold);
+}
+
+.nav-inner {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: block;
+  color: white;
+  padding: 14px 13px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: .5px;
+  transition: .2s;
+}
+
+nav a:hover {
+  background: var(--red);
+  color: var(--gold);
+}
+
+.hero {
+  background:
+    linear-gradient(110deg,
+      rgba(48, 13, 19, .96),
+      rgba(23, 42, 64, .91));
+  color: white;
+  padding: 85px 22px;
+  text-align: center;
+  border-bottom: 5px solid var(--gold);
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.hero .eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.25;
+  margin: 22px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #e6e1dc;
+  font-size: 17px;
+}
+
+.hero-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  letter-spacing: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  transition: .2s;
+}
+
+.hero-link:hover {
+  background: var(--gold);
+  color: var(--red-dark);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 22px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading .small {
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.section-heading h2 {
+  color: var(--navy);
+  font-size: 31px;
+  margin: 8px 0;
+}
+
+.section-heading .line {
+  width: 65px;
+  height: 3px;
+  background: var(--gold);
+  margin: 15px auto;
+}
+
+.intro {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  color: #505050;
+}
+
+.intro strong {
+  color: var(--red);
+}
+
+.values {
+  background: white;
+  padding: 65px 22px;
+}
+
+.grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.value-card {
+  padding: 30px 24px;
+  border: 1px solid #e6dfd1;
+  border-top: 4px solid var(--red);
+  background: var(--cream);
+  text-align: center;
+  transition: .2s;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px #00000012;
+}
+
+.value-card .number {
+  color: var(--gold);
+  font-size: 28px;
+}
+
+.value-card h3 {
+  color: var(--red);
+  font-size: 21px;
+  margin: 10px 0;
+}
+
+.value-card p {
+  color: #666;
+  font-size: 15px;
+}
+
+.topics {
+  background: var(--navy);
+  color: white;
+}
+
+.topics .section-heading h2 {
+  color: white;
+}
+
+.topics .section-heading .small {
+  color: var(--gold);
+}
+
+.topic-list {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.topic-item {
+  padding: 18px 20px;
+  border-left: 3px solid var(--gold);
+  background: #ffffff0d;
+  color: #eee;
+}
+
+.topic-item span {
+  color: var(--gold);
+  margin-right: 10px;
+}
+
+.article-area {
+  background: white;
+}
+
+.article-note {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #666;
+  font-size: 17px;
+}
+
+.catalog-area {
+  background: var(--cream);
+}
+
+.catalog-intro {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+  color: #666;
+}
+
+.catalog-box {
+  max-width: 800px;
+  margin: 30px auto 0;
+  background: white;
+  border: 1px solid #e6dfd1;
+  padding: 35px 25px;
+  text-align: center;
+}
+
+.catalog-box h3 {
+  color: var(--red);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.catalog-box p {
+  color: #666;
+}
+
+.catalog-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 26px;
+  background: var(--red);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.catalog-button:hover {
+  background: var(--red-dark);
+}
+
+.identity {
+  background: #eee9df;
+}
+
+.identity-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.identity-content h3 {
+  color: var(--red);
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.identity-content p {
+  color: #555;
+}
+
+footer {
+  background: var(--red-dark);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 4px solid var(--gold);
+}
+
+footer h2 {
+  font-size: 23px;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+footer p {
+  color: #e3d9d3;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #ffffff30;
+  color: #c9bdb5;
+  font-size: 12px;
+}
+
+@media(max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    padding: 11px 9px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 65px 20px;
+  }
+
+  .container {
+    padding: 48px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topline"></div>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">Portal Literasi Kebangsaan</div>
+    <h1>NASIONAL KEBANGSAAN<br>INDONESIA</h1>
+    <p class="tagline">
+      PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
+    </p>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#beranda">BERANDA</a>
+    <a href="#identitas">IDENTITAS</a>
+    <a href="#pemikiran">PEMIKIRAN</a>
+    <a href="#topik">TEMA</a>
+    <a href="#artikel">ARTIKEL</a>
+    <a href="#katalog">KATALOG BUKU</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero" id="beranda">
+  <div class="hero-content">
+    <p class="eyebrow">Indonesia · Kebangsaan · Masa Depan</p>
+    <h2>Membangun Kesadaran Kebangsaan, Memperkuat Persatuan, Menegakkan Kedaulatan</h2>
+    <p>
+      Ruang literasi dan pemikiran untuk memahami persoalan
+      kebangsaan, memperkuat persatuan dan kesatuan, serta
+      membangun kemandirian Indonesia sebagai bangsa yang
+      berdaulat.
+    </p>
+    <a class="hero-link" href="#pemikiran">JELAJAHI PEMIKIRAN</a>
+  </div>
+</section>
+
+<section class="container" id="pemikiran">
+  <div class="section-heading">
+    <p class="small">Landasan Pemikiran</p>
+    <h2>Membangun Kesadaran Kebangsaan</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="intro">
+    <p>
+      Kebangsaan bukan sekadar identitas kewarganegaraan,
+      melainkan kesadaran bersama tentang keberadaan bangsa,
+      tanggung jawab terhadap tanah air, serta pentingnya
+      menjaga <strong>persatuan, kedaulatan, dan masa depan
+      Indonesia.</strong>
+    </p>
+    <br>
+    <p>
+      Kemajuan bangsa membutuhkan kesadaran kritis,
+      kemandirian berpikir, keadilan dalam kehidupan
+      bernegara, dan kemampuan menentukan arah masa depan
+      tanpa kehilangan jati diri kebangsaan.
+    </p>
+  </div>
+</section>
+
+<section class="values">
+  <div class="section-heading">
+    <p class="small">Tiga Pilar Utama</p>
+    <h2>Arah Perjuangan Kebangsaan</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="grid">
+    <div class="value-card">
+      <div class="number">01</div>
+      <h3>Persatuan Bangsa</h3>
+      <p>
+        Memperkuat kesadaran sebagai satu bangsa,
+        menjaga keutuhan Indonesia, dan membangun
+        kehidupan bersama di tengah keberagaman.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <div class="number">02</div>
+      <h3>Kedaulatan Nasional</h3>
+      <p>
+        Menegakkan kemandirian dalam menentukan
+        kebijakan nasional serta menjaga kepentingan
+        bangsa dari segala bentuk dominasi.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <div class="number">03</div>
+      <h3>Kemandirian Bangsa</h3>
+      <p>
+        Membangun kemampuan nasional dalam mengelola
+        sumber daya alam, ekonomi, ilmu pengetahuan,
+        dan kekuatan produktif bangsa.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="container topics" id="topik">
+  <div class="section-heading">
+    <p class="small">Ruang Pembahasan</p>
+    <h2>Persoalan dan Masa Depan Bangsa</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="topic-list">
+    <div class="topic-item"><span>◆</span> Nasionalisme dan Identitas Bangsa</div>
+    <div class="topic-item"><span>◆</span> Persatuan dan Kesatuan Indonesia</div>
+    <div class="topic-item"><span>◆</span> Kedaulatan Politik dan Ekonomi</div>
+    <div class="topic-item"><span>◆</span> Kemandirian Nasional</div>
+    <div class="topic-item"><span>◆</span> Neoimperialisme dan Geopolitik</div>
+    <div class="topic-item"><span>◆</span> Sumber Daya Alam dan Kepentingan Bangsa</div>
+    <div class="topic-item"><span>◆</span> Kehidupan Bernegara dan Demokrasi</div>
+    <div class="topic-item"><span>◆</span> Pendidikan dan Kesadaran Kebangsaan</div>
+  </div>
+</section>
+
+<section class="container article-area" id="artikel">
+  <div class="section-heading">
+    <p class="small">Literasi dan Dokumentasi</p>
+    <h2>Artikel dan Opini Kebangsaan</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="article-note">
+    <p>
+      Ruang publikasi pemikiran, tulisan, analisis,
+      dan opini tentang berbagai persoalan nasional.
+      Artikel akan dikembangkan dan ditambahkan
+      secara bertahap.
+    </p>
+  </div>
+</section>
+
+<section class="container catalog-area" id="katalog">
+  <div class="section-heading">
+    <p class="small">Pustaka Nasional</p>
+    <h2>Katalog Buku Kebangsaan</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="catalog-intro">
+    <p>
+      Dokumentasi karya tulis dan buku yang membahas
+      nasionalisme, persatuan bangsa, kedaulatan,
+      kemandirian, serta berbagai persoalan Indonesia.
+    </p>
+  </div>
+
+  <div class="catalog-box">
+    <h3>Pustaka Kebangsaan Indonesia</h3>
+    <p>
+      Katalog buku akan memuat identitas karya,
+      sampul, penulis, deskripsi, serta tautan
+      untuk membaca atau mengunduh buku.
+    </p>
+    <a class="catalog-button" href="katalog-buku.html">
+      BUKA KATALOG BUKU
+    </a>
+  </div>
+</section>
+
+<section class="container identity" id="identitas">
+  <div class="section-heading">
+    <p class="small">Tentang Portal</p>
+    <h2>Identitas Nasional Kebangsaan Indonesia</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="identity-content">
+    <h3>Ruang Literasi dan Pemikiran Kebangsaan</h3>
+    <p>
+      NASIONAL KEBANGSAAN INDONESIA merupakan portal
+      literasi dan dokumentasi pemikiran yang
+      diarahkan untuk memperluas wawasan kebangsaan,
+      membangun kesadaran kritis, serta memperkuat
+      pemahaman mengenai persatuan, kedaulatan,
+      dan kemandirian bangsa Indonesia.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <h2>NASIONAL KEBANGSAAN INDONESIA</h2>
+  <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
+  <p>Portal Literasi dan Pemikiran Kebangsaan Indonesia</p>
+
+  <div class="footer-bottom">
+    © 2026 NASIONAL KEBANGSAAN INDONESIA
+    <br>Seluruh hak cipta dilindungi.
+  </div>
+</footer>
+
+</body>
+</html>
