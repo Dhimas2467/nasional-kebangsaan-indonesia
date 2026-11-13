@@ -3,197 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Nasional Kebangsaan Indonesia</title>
-
-    <meta name="description" content="Portal literasi dan pemikiran kebangsaan Indonesia tentang persatuan, kedaulatan, dan kemandirian bangsa.">
-
+    <title>NASIONAL KEBANGSAAN INDONESIA</title>
     <link rel="stylesheet" href="style.css">
-</head>
 
+    <script src="daftar-artikel.js" defer></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            const wadahArtikel = document.getElementById("article-grid");
+
+            if (!wadahArtikel || typeof daftarArtikel === "undefined") {
+                return;
+            }
+
+            const artikelTerbaru = daftarArtikel.slice(0, 3);
+
+            wadahArtikel.innerHTML = artikelTerbaru.map(function (artikel) {
+                return `
+                    <article class="article-card">
+                        <a href="${artikel.halaman}" class="article-link">
+                            <h2>${artikel.judul}</h2>
+                            <p>${artikel.ringkasan}</p>
+                            <span class="read-more">Baca Selengkapnya →</span>
+                        </a>
+                    </article>
+                `;
+            }).join("");
+        });
+    </script>
+</head>
 <body>
 
-    <!-- HEADER -->
+<header>
+    <div class="header-inner">
+        <div class="site-title">NASIONAL KEBANGSAAN INDONESIA</div>
+        <div class="site-tagline">PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA</div>
+    </div>
+</header>
 
-    <header>
-        <div class="header-inner">
+<nav>
+    <a href="index.html" class="home-button active" aria-label="Beranda" title="Beranda">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10.5L12 3l9 7.5"></path>
+            <path d="M5.5 9.5V21h13V9.5"></path>
+            <path d="M9 21v-7h6v7"></path>
+        </svg>
+    </a>
+    <a href="identitas.html">Identitas</a>
+    <a href="pemikiran.html">Pemikiran</a>
+    <a href="katalog-buku.html">Katalog Buku</a>
+</nav>
 
-            <div class="site-title">
-                NASIONAL KEBANGSAAN INDONESIA
-            </div>
+<main>
+    <section class="content-section">
+        <div class="container">
 
-            <div class="site-tagline">
-                PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
+            <h1 class="section-title">Artikel dan Pemikiran Kebangsaan</h1>
+
+            <p class="section-intro">
+                Ruang literasi dan pemikiran untuk memperkuat persatuan bangsa,
+                menegakkan kedaulatan nasional, serta membangun kemandirian Indonesia.
+            </p>
+
+            <div class="article-grid" id="article-grid">
+                <p>Memuat artikel...</p>
             </div>
 
         </div>
-    </header>
+    </section>
+</main>
 
-
-    <!-- NAVIGASI -->
-
-    <nav>
-        <div class="nav-inner">
-
-            <a href="index.html"
-               class="active home-button"
-               aria-label="Beranda"
-               title="Beranda">
-
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M3 10.5L12 3l9 7.5"></path>
-                    <path d="M5.5 9.5V21h13V9.5"></path>
-                    <path d="M9.5 21v-7h5v7"></path>
-                </svg>
-
-            </a>
-
-            <a href="identitas.html">
-                Identitas
-            </a>
-
-            <a href="pemikiran.html">
-                Pemikiran
-            </a>
-
-            <a href="katalog-buku.html">
-                Katalog Buku
-            </a>
-
-        </div>
-    </nav>
-
-
-    <!-- KONTEN BERANDA -->
-
-    <main>
-
-        <section class="content-section">
-
-            <div class="container">
-
-                <h1 class="section-title">
-                    Artikel dan Pemikiran Kebangsaan
-                </h1>
-
-                <p class="section-intro">
-                    Ruang literasi dan pemikiran untuk memperkuat
-                    persatuan bangsa, menegakkan kedaulatan nasional,
-                    serta membangun kemandirian Indonesia.
-                </p>
-
-
-                <!-- ARTIKEL PERTAMA -->
-
-                <div class="article-grid">
-
-                    <article class="article-card">
-
-                        <h2>
-                            Neo Divide et Impera:
-                            Strategi Memecah Belah Bangsa
-                        </h2>
-
-                        <p>
-                            Strategi memecah belah bangsa bukan sekadar
-                            persoalan konflik sosial dan politik.
-                            Perpecahan dapat menjadi jalan bagi kekuatan
-                            tertentu untuk memperlemah persatuan dan
-                            membuka peluang penguasaan sumber daya alam
-                            Indonesia.
-                        </p>
-
-                        <a href="artikel.html" class="read-more">
-                            Baca Selengkapnya &raquo;
-                        </a>
-
-                    </article>
-
-
-                    <!-- ARTIKEL KEDUA -->
-
-                    <article class="article-card">
-
-                        <h2>
-                            Pendidikan Bukan Sekadar Kecerdasan
-                        </h2>
-
-                        <p>
-                            Pendidikan tidak cukup hanya menghasilkan
-                            manusia yang mampu menghafal, memahami teori,
-                            dan menguasai pengetahuan. Pendidikan harus
-                            membangun kesadaran, kejernihan berpikir,
-                            serta kemampuan memahami kenyataan kehidupan.
-                        </p>
-
-                        <a href="artikel.html" class="read-more">
-                            Baca Selengkapnya &raquo;
-                        </a>
-
-                    </article>
-
-
-                    <!-- ARTIKEL KETIGA -->
-
-                    <article class="article-card">
-
-                        <h2>
-                            Membangun Kembali Kedaulatan
-                            dan Kemandirian Bangsa
-                        </h2>
-
-                        <p>
-                            Kedaulatan dan kemandirian merupakan landasan
-                            penting bagi masa depan Indonesia. Bangsa
-                            yang berdaulat harus mampu menentukan arah
-                            pembangunan serta mengelola sumber daya alam
-                            untuk kepentingan rakyat dan masa depan bangsa.
-                        </p>
-
-                        <a href="artikel.html" class="read-more">
-                            Baca Selengkapnya &raquo;
-                        </a>
-
-                    </article>
-
-                </div>
-
-
-                <!-- HALAMAN BERIKUT -->
-
-                <div class="next-page-wrap">
-
-                    <a href="artikel.html" class="next-page-button">
-                        HALAMAN BERIKUT &raquo;
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-title">
-            NASIONAL KEBANGSAAN INDONESIA
-        </div>
-
-        <p>
-            Persatuan · Kedaulatan · Kemandirian Bangsa
-        </p>
-
-        <p>
-            &copy; 2026 Nasional Kebangsaan Indonesia
-        </p>
-
-    </footer>
-
+<footer>
+    <div class="footer-title">NASIONAL KEBANGSAAN INDONESIA</div>
+    <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
+    <p>&copy; 2026 Nasional Kebangsaan Indonesia</p>
+</footer>
 
 <a href="#" class="back-to-top" aria-label="Kembali ke atas" title="Back to Top">
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -202,6 +85,5 @@
     </svg>
 </a>
 
-    
 </body>
 </html>
