@@ -1,4 +1,3 @@
-
 (function () {
     function pasangTombolBagikan() {
         const backToTop = document.querySelector(".back-to-top");
