@@ -1,581 +1,269 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Landasan pemikiran kebangsaan tentang persatuan, kedaulatan, kemandirian, dan masa depan Indonesia.">
-<meta name="theme-color" content="#781d26">
-<title>Pemikiran Kebangsaan | NASIONAL KEBANGSAAN INDONESIA</title>
-
-<style>
-:root {
-  --red: #781d26;
-  --red-dark: #50121a;
-  --gold: #c9a45c;
-  --navy: #172a40;
-  --cream: #f7f4ed;
-  --white: #ffffff;
-  --text: #292929;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.8;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.topline {
-  height: 5px;
-  background: linear-gradient(
-    to right, #c52b35 0 50%, #ffffff 50% 100%
-  );
-}
-
-header {
-  background: var(--red-dark);
-  color: white;
-  border-bottom: 3px solid var(--gold);
-}
-
-.header-inner {
-  max-width: 1150px;
-  margin: auto;
-  padding: 27px 22px;
-  text-align: center;
-}
-
-.brand {
-  color: var(--gold);
-  font-size: 13px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}
-
-header h1 {
-  font-size: clamp(27px, 5vw, 43px);
-  line-height: 1.2;
-  letter-spacing: 1px;
-  margin: 12px 0;
-}
-
-.tagline {
-  color: #eee1d1;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
-nav {
-  background: var(--navy);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 2px solid var(--gold);
-}
-
-.nav-inner {
-  max-width: 1150px;
-  margin: auto;
-  padding: 0 15px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav a {
-  display: block;
-  color: white;
-  padding: 13px 15px;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: .5px;
-  transition: .2s;
-}
-
-nav a:hover,
-nav a.active {
-  background: var(--red);
-  color: var(--gold);
-}
-
-.page-banner {
-  background: linear-gradient(
-    110deg,
-    rgba(48, 13, 19, .97),
-    rgba(23, 42, 64, .94)
-  );
-  color: white;
-  padding: 65px 22px;
-  text-align: center;
-  border-bottom: 5px solid var(--gold);
-}
-
-.page-banner .eyebrow {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.page-banner h2 {
-  font-size: clamp(29px, 5vw, 42px);
-  margin: 13px 0;
-}
-
-.page-banner p {
-  color: #e6e1dc;
-  font-size: 16px;
-}
-
-.container {
-  max-width: 950px;
-  margin: auto;
-  padding: 55px 22px;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section-heading .small {
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-
-.section-heading h2 {
-  color: var(--navy);
-  font-size: 28px;
-  margin: 8px 0;
-}
-
-.line {
-  width: 65px;
-  height: 3px;
-  background: var(--gold);
-  margin: 14px auto;
-}
-
-.content {
-  color: #484848;
-  font-size: 17px;
-  text-align: justify;
-}
-
-.content p {
-  margin-bottom: 19px;
-}
-
-.content strong {
-  color: var(--red);
-}
-
-.thought-area {
-  background: white;
-}
-
-.thought-grid {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.thought-card {
-  background: var(--cream);
-  border: 1px solid #e6dfd1;
-  border-top: 4px solid var(--red);
-  padding: 26px;
-}
-
-.thought-card .number {
-  color: var(--gold);
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
-.thought-card h3 {
-  color: var(--red);
-  font-size: 21px;
-  margin: 8px 0;
-}
-
-.thought-card p {
-  color: #555;
-  font-size: 15px;
-}
-
-.principle-box {
-  background: var(--navy);
-  color: white;
-  padding: 35px;
-  margin-top: 30px;
-  text-align: center;
-  border-bottom: 4px solid var(--gold);
-}
-
-.principle-box h3 {
-  color: var(--gold);
-  font-size: 23px;
-  margin-bottom: 12px;
-}
-
-.principle-box p {
-  color: #eee;
-  font-size: 16px;
-}
-
-.closing {
-  background: #eee9df;
-  padding: 48px 22px;
-  text-align: center;
-}
-
-.closing h2 {
-  color: var(--red);
-  font-size: 25px;
-  margin-bottom: 12px;
-}
-
-.closing p {
-  max-width: 780px;
-  margin: auto;
-  color: #555;
-}
-
-footer {
-  background: var(--red-dark);
-  color: white;
-  text-align: center;
-  padding: 38px 20px;
-  border-top: 4px solid var(--gold);
-}
-
-footer h2 {
-  font-size: 22px;
-  color: var(--gold);
-  letter-spacing: 2px;
-}
-
-footer p {
-  color: #e3d9d3;
-  font-size: 13px;
-  margin-top: 9px;
-}
-
-.footer-bottom {
-  margin-top: 23px;
-  padding-top: 17px;
-  border-top: 1px solid #ffffff30;
-  color: #c9bdb5;
-  font-size: 12px;
-}
-
-@media(max-width: 750px) {
-  nav a {
-    padding: 10px 9px;
-    font-size: 11px;
-  }
-
-  .thought-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .container {
-    padding: 42px 19px;
-  }
-
-  .content {
-    font-size: 16px;
-  }
-
-  .principle-box {
-    padding: 26px 20px;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landasan pemikiran kebangsaan tentang persatuan, kedaulatan, kemandirian, dan masa depan Indonesia.">
+    <meta name="theme-color" content="#781d26">
+    <title>Pemikiran Kebangsaan | NASIONAL KEBANGSAAN INDONESIA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="topline"></div>
-
 <header>
-  <div class="header-inner">
-    <div class="brand">Portal Literasi Kebangsaan</div>
-    <h1>NASIONAL KEBANGSAAN<br>INDONESIA</h1>
-    <p class="tagline">
-      PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
-    </p>
-  </div>
+    <div class="container header-inner">
+        <div class="site-title">NASIONAL KEBANGSAAN INDONESIA</div>
+        <div class="site-tagline">
+            PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
+        </div>
+    </div>
 </header>
 
 <nav>
-  <div class="nav-inner">
-    <a href="index.html">BERANDA</a>
-    <a href="identitas.html">IDENTITAS</a>
-    <a href="pemikiran.html" class="active">PEMIKIRAN</a>
-    <a href="tema.html">TEMA</a>
-    <a href="artikel.html">ARTIKEL</a>
-    <a href="katalog-buku.html">KATALOG BUKU</a>
-  </div>
+    <div class="container nav-inner">
+        <a href="index.html">Beranda</a>
+        <a href="identitas.html">Identitas</a>
+        <a href="pemikiran.html" class="active">Pemikiran</a>
+        <a href="artikel.html">Artikel & Opini</a>
+        <a href="katalog-buku.html">Katalog Buku</a>
+    </div>
 </nav>
 
 <main>
 
 <section class="page-banner">
-  <p class="eyebrow">Landasan dan Orientasi</p>
-  <h2>Pemikiran Kebangsaan Indonesia</h2>
-  <p>Membangun Kesadaran untuk Menentukan Masa Depan Bangsa</p>
-</section>
-
-<section class="container">
-
-  <div class="section-heading">
-    <p class="small">Landasan Pemikiran</p>
-    <h2>Kesadaran tentang Keberadaan Bangsa</h2>
-    <div class="line"></div>
-  </div>
-
-  <div class="content">
-    <p>
-      Pemikiran kebangsaan berangkat dari kesadaran
-      bahwa Indonesia bukan sekadar wilayah geografis
-      atau kumpulan penduduk yang hidup dalam batas
-      administrasi negara. Indonesia merupakan
-      kesatuan kehidupan bangsa yang terbentuk
-      melalui perjalanan sejarah, pengalaman bersama,
-      keberagaman kebudayaan, serta cita-cita untuk
-      membangun kehidupan nasional.
-    </p>
-
-    <p>
-      Keberadaan bangsa tidak cukup dipertahankan
-      melalui simbol, semboyan, dan pernyataan
-      persatuan. Persatuan membutuhkan kesadaran
-      mengenai kepentingan bersama, tanggung jawab
-      terhadap tanah air, dan pemahaman bahwa
-      kehidupan nasional tidak dapat dibangun
-      dengan mengutamakan kepentingan kelompok
-      di atas kepentingan bangsa.
-    </p>
-
-    <p>
-      Oleh karena itu, pemikiran kebangsaan perlu
-      diarahkan untuk memahami berbagai persoalan
-      yang mempengaruhi keberlangsungan Indonesia,
-      termasuk persoalan politik, ekonomi, sosial,
-      pendidikan, penguasaan sumber daya alam,
-      serta hubungan Indonesia dengan kekuatan
-      internasional.
-    </p>
-  </div>
-
-</section>
-
-<section class="thought-area">
-  <div class="container">
-
-    <div class="section-heading">
-      <p class="small">Tiga Landasan Utama</p>
-      <h2>Arah Pemikiran Kebangsaan</h2>
-      <div class="line"></div>
+    <div class="container">
+        <h1>PEMIKIRAN KEBANGSAAN INDONESIA</h1>
+        <p>Membangun Kesadaran untuk Menentukan Masa Depan Bangsa</p>
     </div>
+</section>
 
-    <div class="thought-grid">
+<section class="content-section">
+    <div class="container">
 
-      <div class="thought-card">
-        <div class="number">LANDASAN 01</div>
-        <h3>Persatuan Bangsa</h3>
-        <p>
-          Persatuan merupakan syarat penting bagi
-          keberlangsungan Indonesia. Keberagaman
-          suku, budaya, bahasa, dan pandangan tidak
-          seharusnya menjadi alasan untuk saling
-          mempertentangkan kepentingan. Seluruh
-          perbedaan perlu ditempatkan dalam kesadaran
-          sebagai satu bangsa dan satu tanah air.
-        </p>
-      </div>
+        <h2 class="section-title">Kesadaran tentang Keberadaan Bangsa</h2>
 
-      <div class="thought-card">
-        <div class="number">LANDASAN 02</div>
-        <h3>Kedaulatan Nasional</h3>
-        <p>
-          Kedaulatan berarti kemampuan bangsa dan
-          negara untuk menentukan arah kehidupannya
-          sendiri. Keputusan politik, pengelolaan
-          ekonomi, dan kebijakan nasional harus
-          mempertimbangkan kepentingan rakyat serta
-          keberlangsungan Indonesia.
-        </p>
-      </div>
+        <div class="content-box">
 
-      <div class="thought-card">
-        <div class="number">LANDASAN 03</div>
-        <h3>Kemandirian Bangsa</h3>
-        <p>
-          Kemandirian merupakan kemampuan membangun
-          kekuatan nasional berdasarkan potensi,
-          sumber daya, ilmu pengetahuan, teknologi,
-          dan kemampuan produktif bangsa. Kemandirian
-          tidak berarti menutup diri dari dunia,
-          melainkan memiliki kemampuan menentukan
-          kepentingan sendiri.
-        </p>
-      </div>
+            <p>
+                Pemikiran kebangsaan berangkat dari kesadaran
+                bahwa Indonesia bukan sekadar wilayah geografis
+                atau kumpulan penduduk yang hidup dalam batas
+                administrasi negara. Indonesia merupakan
+                kesatuan kehidupan bangsa yang terbentuk
+                melalui perjalanan sejarah, pengalaman bersama,
+                keberagaman kebudayaan, serta cita-cita untuk
+                membangun kehidupan nasional.
+            </p>
 
-      <div class="thought-card">
-        <div class="number">LANDASAN 04</div>
-        <h3>Kepentingan Nasional</h3>
-        <p>
-          Kepentingan nasional menjadi pertimbangan
-          utama dalam menentukan kebijakan dan
-          tindakan yang berdampak terhadap kehidupan
-          bangsa. Kekayaan alam, kekuatan ekonomi,
-          dan masa depan Indonesia harus dikelola
-          dengan tanggung jawab untuk sebesar-besarnya
-          kepentingan rakyat.
-        </p>
-      </div>
+            <p>
+                Keberadaan bangsa tidak cukup dipertahankan
+                melalui simbol, semboyan, dan pernyataan
+                persatuan. Persatuan membutuhkan kesadaran
+                mengenai kepentingan bersama, tanggung jawab
+                terhadap tanah air, dan pemahaman bahwa
+                kehidupan nasional tidak dapat dibangun
+                dengan mengutamakan kepentingan kelompok
+                di atas kepentingan bangsa.
+            </p>
+
+            <p>
+                Oleh karena itu, pemikiran kebangsaan perlu
+                diarahkan untuk memahami berbagai persoalan
+                yang mempengaruhi keberlangsungan Indonesia,
+                termasuk persoalan politik, ekonomi, sosial,
+                pendidikan, penguasaan sumber daya alam,
+                serta hubungan Indonesia dengan kekuatan
+                internasional.
+            </p>
+
+        </div>
 
     </div>
-
-  </div>
 </section>
 
-<section class="container">
+<section class="content-section">
+    <div class="container">
 
-  <div class="section-heading">
-    <p class="small">Cara Pandang</p>
-    <h2>Membangun Pemikiran yang Kritis</h2>
-    <div class="line"></div>
-  </div>
+        <h2 class="section-title">Empat Landasan Utama Pemikiran Kebangsaan</h2>
 
-  <div class="content">
-    <p>
-      Kesadaran kebangsaan membutuhkan kemampuan
-      untuk memahami persoalan secara jernih dan
-      menyeluruh. Setiap persoalan nasional perlu
-      dilihat berdasarkan kenyataan, kepentingan
-      yang terlibat, sebab yang melatarbelakangi,
-      serta akibat yang ditimbulkannya terhadap
-      kehidupan bangsa.
-    </p>
+        <div class="thought-grid">
 
-    <p>
-      Pemikiran kritis bukan berarti menolak semua
-      kebijakan atau mempertentangkan setiap
-      perbedaan. Pemikiran kritis merupakan
-      kemampuan menilai suatu keadaan secara
-      bertanggung jawab, membedakan fakta dan
-      pendapat, serta tidak menerima suatu
-      kesimpulan hanya karena disampaikan oleh
-      pihak yang memiliki kekuasaan atau pengaruh.
-    </p>
+            <div class="thought-card">
+                <div class="number">LANDASAN 01</div>
+                <h3>Persatuan Bangsa</h3>
+                <p>
+                    Persatuan merupakan syarat penting bagi
+                    keberlangsungan Indonesia. Keberagaman
+                    suku, budaya, bahasa, dan pandangan tidak
+                    seharusnya menjadi alasan untuk saling
+                    mempertentangkan kepentingan. Seluruh
+                    perbedaan perlu ditempatkan dalam kesadaran
+                    sebagai satu bangsa dan satu tanah air.
+                </p>
+            </div>
 
-    <p>
-      Dalam kehidupan kebangsaan, keterbukaan
-      terhadap kritik merupakan bagian dari
-      tanggung jawab untuk memperbaiki keadaan.
-      Kritik terhadap kebijakan, penyelenggaraan
-      negara, maupun pengelolaan kepentingan
-      nasional harus ditempatkan sebagai upaya
-      membangun kehidupan bangsa yang lebih baik.
-    </p>
-  </div>
+            <div class="thought-card">
+                <div class="number">LANDASAN 02</div>
+                <h3>Kedaulatan Nasional</h3>
+                <p>
+                    Kedaulatan berarti kemampuan bangsa dan
+                    negara untuk menentukan arah kehidupannya
+                    sendiri. Keputusan politik, pengelolaan
+                    ekonomi, dan kebijakan nasional harus
+                    mempertimbangkan kepentingan rakyat serta
+                    keberlangsungan Indonesia.
+                </p>
+            </div>
 
-  <div class="principle-box">
-    <h3>Prinsip Pemikiran Kebangsaan</h3>
-    <p>
-      Kepentingan bangsa harus ditempatkan di atas
-      kepentingan kelompok. Persatuan harus dijaga
-      tanpa menghilangkan keberagaman. Kedaulatan
-      harus ditegakkan melalui kemampuan menentukan
-      arah sendiri. Kemandirian harus dibangun
-      melalui kekuatan bangsa sendiri.
-    </p>
-  </div>
+            <div class="thought-card">
+                <div class="number">LANDASAN 03</div>
+                <h3>Kemandirian Bangsa</h3>
+                <p>
+                    Kemandirian merupakan kemampuan membangun
+                    kekuatan nasional berdasarkan potensi,
+                    sumber daya, ilmu pengetahuan, teknologi,
+                    dan kemampuan produktif bangsa. Kemandirian
+                    tidak berarti menutup diri dari dunia,
+                    melainkan memiliki kemampuan menentukan
+                    kepentingan sendiri.
+                </p>
+            </div>
 
+            <div class="thought-card">
+                <div class="number">LANDASAN 04</div>
+                <h3>Kepentingan Nasional</h3>
+                <p>
+                    Kepentingan nasional menjadi pertimbangan
+                    utama dalam menentukan kebijakan dan
+                    tindakan yang berdampak terhadap kehidupan
+                    bangsa. Kekayaan alam, kekuatan ekonomi,
+                    dan masa depan Indonesia harus dikelola
+                    dengan tanggung jawab untuk sebesar-besarnya
+                    kepentingan rakyat.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
-<section class="container">
+<section class="content-section">
+    <div class="container">
 
-  <div class="section-heading">
-    <p class="small">Orientasi Masa Depan</p>
-    <h2>Indonesia yang Berdaulat dan Mandiri</h2>
-    <div class="line"></div>
-  </div>
+        <h2 class="section-title">Membangun Pemikiran yang Kritis</h2>
 
-  <div class="content">
-    <p>
-      Masa depan Indonesia tidak dapat hanya
-      ditentukan oleh besarnya jumlah penduduk,
-      luas wilayah, atau kekayaan sumber daya alam.
-      Seluruh potensi tersebut membutuhkan
-      kemampuan pengelolaan yang berpihak pada
-      kepentingan nasional dan kesejahteraan rakyat.
-    </p>
+        <div class="content-box">
 
-    <p>
-      Bangsa yang memiliki kekayaan alam tetapi
-      tidak memiliki kemampuan mengelolanya secara
-      mandiri akan menghadapi ketergantungan.
-      Bangsa yang memiliki sumber daya manusia
-      tetapi tidak membangun kemampuan ilmu
-      pengetahuan dan teknologi akan kesulitan
-      memperkuat daya saingnya.
-    </p>
+            <p>
+                Kesadaran kebangsaan membutuhkan kemampuan
+                untuk memahami persoalan secara jernih dan
+                menyeluruh. Setiap persoalan nasional perlu
+                dilihat berdasarkan kenyataan, kepentingan
+                yang terlibat, sebab yang melatarbelakangi,
+                serta akibat yang ditimbulkannya terhadap
+                kehidupan bangsa.
+            </p>
 
-    <p>
-      Karena itu, pemikiran kebangsaan harus
-      mendorong pembangunan kekuatan nasional
-      secara menyeluruh. Persatuan menjadi landasan
-      kehidupan bersama, kedaulatan menjadi
-      kemampuan menentukan arah, dan kemandirian
-      menjadi kekuatan untuk mewujudkan cita-cita
-      bangsa.
-    </p>
-  </div>
+            <p>
+                Pemikiran kritis bukan berarti menolak semua
+                kebijakan atau mempertentangkan setiap
+                perbedaan. Pemikiran kritis merupakan
+                kemampuan menilai suatu keadaan secara
+                bertanggung jawab, membedakan fakta dan
+                pendapat, serta tidak menerima suatu
+                kesimpulan hanya karena disampaikan oleh
+                pihak yang memiliki kekuasaan atau pengaruh.
+            </p>
 
+            <p>
+                Dalam kehidupan kebangsaan, keterbukaan
+                terhadap kritik merupakan bagian dari
+                tanggung jawab untuk memperbaiki keadaan.
+                Kritik terhadap kebijakan, penyelenggaraan
+                negara, maupun pengelolaan kepentingan
+                nasional harus ditempatkan sebagai upaya
+                membangun kehidupan bangsa yang lebih baik.
+            </p>
+
+        </div>
+
+        <div class="principle-box">
+            <h3>Prinsip Pemikiran Kebangsaan</h3>
+            <p>
+                Kepentingan bangsa harus ditempatkan di atas
+                kepentingan kelompok. Persatuan harus dijaga
+                tanpa menghilangkan keberagaman. Kedaulatan
+                harus ditegakkan melalui kemampuan menentukan
+                arah sendiri. Kemandirian harus dibangun
+                melalui kekuatan bangsa sendiri.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+
+        <h2 class="section-title">Indonesia yang Berdaulat dan Mandiri</h2>
+
+        <div class="content-box">
+
+            <p>
+                Masa depan Indonesia tidak dapat hanya
+                ditentukan oleh besarnya jumlah penduduk,
+                luas wilayah, atau kekayaan sumber daya alam.
+                Seluruh potensi tersebut membutuhkan
+                kemampuan pengelolaan yang berpihak pada
+                kepentingan nasional dan kesejahteraan rakyat.
+            </p>
+
+            <p>
+                Bangsa yang memiliki kekayaan alam tetapi
+                tidak memiliki kemampuan mengelolanya secara
+                mandiri akan menghadapi ketergantungan.
+                Bangsa yang memiliki sumber daya manusia
+                tetapi tidak membangun kemampuan ilmu
+                pengetahuan dan teknologi akan kesulitan
+                memperkuat daya saingnya.
+            </p>
+
+            <p>
+                Karena itu, pemikiran kebangsaan harus
+                mendorong pembangunan kekuatan nasional
+                secara menyeluruh. Persatuan menjadi landasan
+                kehidupan bersama, kedaulatan menjadi
+                kemampuan menentukan arah, dan kemandirian
+                menjadi kekuatan untuk mewujudkan cita-cita
+                bangsa.
+            </p>
+
+        </div>
+
+    </div>
 </section>
 
 <section class="closing">
-  <h2>Bangsa yang Bersatu, Berdaulat, dan Mandiri</h2>
-  <p>
-    Kesadaran kebangsaan bukan hanya tentang
-    memahami keberadaan Indonesia, tetapi juga
-    tentang tanggung jawab bersama dalam menjaga
-    persatuan, memperkuat kedaulatan, dan membangun
-    kemandirian bangsa.
-  </p>
+    <h2>Bangsa yang Bersatu, Berdaulat, dan Mandiri</h2>
+    <p>
+        Kesadaran kebangsaan bukan hanya tentang
+        memahami keberadaan Indonesia, tetapi juga
+        tentang tanggung jawab bersama dalam menjaga
+        persatuan, memperkuat kedaulatan, dan membangun
+        kemandirian bangsa.
+    </p>
 </section>
 
 </main>
 
 <footer>
-  <h2>NASIONAL KEBANGSAAN INDONESIA</h2>
-  <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
-  <p>Portal Literasi dan Pemikiran Kebangsaan Indonesia</p>
-
-  <div class="footer-bottom">
-    © 2026 NASIONAL KEBANGSAAN INDONESIA
-    <br>Seluruh hak cipta dilindungi.
-  </div>
+    <p class="footer-title">NASIONAL KEBANGSAAN INDONESIA</p>
+    <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
+    <p>Portal Literasi dan Pemikiran Kebangsaan Indonesia</p>
+    <p>© 2026 Nasional Kebangsaan Indonesia</p>
 </footer>
 
 </body>
