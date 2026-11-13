@@ -661,3 +661,53 @@ footer p {
     }
 
 }
+
+
+/* BACK TO TOP */
+.back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #781d26;
+    color: #e6d5a8;
+    border: 2px solid #c9a45c;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    transition: 0.25s ease;
+}
+
+.back-to-top:hover {
+    background: #50121a;
+    transform: translateY(-4px);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+    .back-to-top {
+        width: 43px;
+        height: 43px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
