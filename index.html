@@ -1,488 +1,130 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portal literasi dan pemikiran kebangsaan Indonesia tentang persatuan, kedaulatan, dan kemandirian bangsa.">
-<meta name="theme-color" content="#781d26">
-<title>NASIONAL KEBANGSAAN INDONESIA</title>
-
-<style>
-:root {
-  --red: #781d26;
-  --red-dark: #50121a;
-  --gold: #c9a45c;
-  --navy: #172a40;
-  --cream: #f7f4ed;
-  --white: #ffffff;
-  --text: #292929;
-  --muted: #777;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.7;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-header {
-  background: var(--red-dark);
-  color: white;
-  border-bottom: 3px solid var(--gold);
-}
-
-.topline {
-  height: 5px;
-  background: linear-gradient(
-    to right, #c52b35 0 50%, #ffffff 50% 100%
-  );
-}
-
-.header-inner {
-  max-width: 1150px;
-  margin: auto;
-  padding: 27px 22px;
-  text-align: center;
-}
-
-.brand {
-  color: var(--gold);
-  font-size: 13px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}
-
-.header-inner h1 {
-  font-size: clamp(27px, 5vw, 43px);
-  line-height: 1.2;
-  letter-spacing: 1px;
-  margin: 12px 0;
-}
-
-.tagline {
-  color: #eee1d1;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
-nav {
-  background: var(--navy);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 2px solid var(--gold);
-}
-
-.nav-inner {
-  max-width: 1150px;
-  margin: auto;
-  padding: 0 15px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav a {
-  display: block;
-  color: white;
-  padding: 13px 15px;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: .5px;
-  transition: .2s;
-}
-
-nav a:hover {
-  background: var(--red);
-  color: var(--gold);
-}
-
-.hero {
-  background: linear-gradient(
-    110deg,
-    rgba(48, 13, 19, .97),
-    rgba(23, 42, 64, .94)
-  );
-  color: white;
-  padding: 75px 22px;
-  text-align: center;
-  border-bottom: 5px solid var(--gold);
-}
-
-.hero-content {
-  max-width: 850px;
-  margin: auto;
-}
-
-.eyebrow {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font-size: 13px;
-  text-transform: uppercase;
-}
-
-.hero h2 {
-  font-size: clamp(29px, 5vw, 46px);
-  line-height: 1.3;
-  margin: 20px 0;
-}
-
-.hero p {
-  max-width: 720px;
-  margin: auto;
-  color: #e6e1dc;
-  font-size: 17px;
-}
-
-.hero-link {
-  display: inline-block;
-  margin-top: 28px;
-  padding: 11px 27px;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 1px;
-  transition: .2s;
-}
-
-.hero-link:hover {
-  background: var(--gold);
-  color: var(--red-dark);
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 55px 22px;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.section-heading .small {
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-
-.section-heading h2 {
-  color: var(--navy);
-  font-size: 30px;
-  margin: 8px 0;
-}
-
-.line {
-  width: 65px;
-  height: 3px;
-  background: var(--gold);
-  margin: 14px auto;
-}
-
-.intro {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-  color: #505050;
-  font-size: 17px;
-}
-
-.intro strong {
-  color: var(--red);
-}
-
-.article-area {
-  background: white;
-  padding: 55px 22px 65px;
-}
-
-.article-content {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.article-card {
-  background: var(--cream);
-  border: 1px solid #e6dfd1;
-  border-top: 4px solid var(--red);
-  padding: 25px 22px;
-  display: flex;
-  flex-direction: column;
-  min-height: 255px;
-  transition: .2s;
-}
-
-.article-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px #00000012;
-}
-
-.article-number {
-  color: var(--gold);
-  font-size: 13px;
-  letter-spacing: 2px;
-}
-
-.article-card h3 {
-  color: var(--red);
-  font-size: 21px;
-  line-height: 1.4;
-  margin: 12px 0;
-}
-
-.article-card p {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.read-more {
-  color: var(--navy);
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: .5px;
-  margin-top: auto;
-}
-
-.read-more:hover {
-  color: var(--red);
-}
-
-.all-articles {
-  text-align: center;
-  margin-top: 35px;
-}
-
-.all-articles a {
-  display: inline-block;
-  background: var(--red);
-  color: white;
-  padding: 12px 27px;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.all-articles a:hover {
-  background: var(--red-dark);
-}
-
-footer {
-  background: var(--red-dark);
-  color: white;
-  text-align: center;
-  padding: 38px 20px;
-  border-top: 4px solid var(--gold);
-}
-
-footer h2 {
-  font-size: 22px;
-  color: var(--gold);
-  letter-spacing: 2px;
-}
-
-footer p {
-  color: #e3d9d3;
-  font-size: 13px;
-  margin-top: 9px;
-}
-
-.footer-bottom {
-  margin-top: 23px;
-  padding-top: 17px;
-  border-top: 1px solid #ffffff30;
-  color: #c9bdb5;
-  font-size: 12px;
-}
-
-@media(max-width: 750px) {
-  .article-grid {
-    grid-template-columns: 1fr;
-  }
-
-  nav a {
-    padding: 10px 9px;
-    font-size: 11px;
-  }
-
-  .hero {
-    padding: 58px 20px;
-  }
-
-  .container,
-  .article-area {
-    padding: 42px 18px;
-  }
-
-  .article-card {
-    min-height: auto;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal literasi dan pemikiran kebangsaan Indonesia tentang persatuan, kedaulatan, dan kemandirian bangsa.">
+    <title>Nasional Kebangsaan Indonesia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="topline"></div>
-
 <header>
-  <div class="header-inner">
-    <div class="brand">Portal Literasi Kebangsaan</div>
-    <h1>NASIONAL KEBANGSAAN<br>INDONESIA</h1>
-    <p class="tagline">
-      PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
-    </p>
-  </div>
+    <div class="container header-inner">
+        <div class="site-title">NASIONAL KEBANGSAAN INDONESIA</div>
+        <div class="site-tagline">
+            PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
+        </div>
+    </div>
 </header>
 
 <nav>
-  <div class="nav-inner">
-    <a href="index.html">BERANDA</a>
-    <a href="identitas.html">IDENTITAS</a>
-    <a href="pemikiran.html">PEMIKIRAN</a>
-    <a href="tema.html">TEMA</a>
-    <a href="artikel.html">ARTIKEL</a>
-    <a href="katalog-buku.html">KATALOG BUKU</a>
-  </div>
+    <div class="container nav-inner">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="identitas.html">Identitas</a>
+        <a href="pemikiran.html">Pemikiran</a>
+        <a href="artikel.html">Artikel & Opini</a>
+        <a href="katalog-buku.html">Katalog Buku</a>
+    </div>
 </nav>
 
 <main>
 
-<section class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">Indonesia · Kebangsaan · Masa Depan</p>
+    <section class="hero">
+        <div class="container">
+            <h1>Membangun Kesadaran Kebangsaan Indonesia</h1>
+            <div class="hero-line"></div>
+            <p>
+                Ruang literasi dan pemikiran untuk memperkuat persatuan
+                bangsa, menegakkan kedaulatan nasional, serta membangun
+                kemandirian Indonesia.
+            </p>
+        </div>
+    </section>
 
-    <h2>
-      Membangun Kesadaran Kebangsaan,
-      Memperkuat Persatuan,
-      Menegakkan Kedaulatan
-    </h2>
+    <section class="content-section">
+        <div class="container">
 
-    <p>
-      Ruang literasi dan pemikiran untuk memahami
-      persoalan kebangsaan, memperkuat persatuan
-      dan kesatuan, serta membangun kemandirian
-      Indonesia sebagai bangsa yang berdaulat.
-    </p>
+            <h2 class="section-title">Selamat Datang</h2>
 
-    <a class="hero-link" href="pemikiran.html">
-      JELAJAHI PEMIKIRAN
-    </a>
-  </div>
-</section>
+            <p class="section-intro">
+                Nasional Kebangsaan Indonesia merupakan portal yang
+                menghimpun gagasan, pemikiran, artikel, opini, dan karya
+                tulis mengenai kehidupan kebangsaan Indonesia.
+            </p>
 
-<section class="container">
-  <div class="section-heading">
-    <p class="small">Nasional Kebangsaan Indonesia</p>
-    <h2>Persatuan, Kedaulatan, dan Kemandirian</h2>
-    <div class="line"></div>
-  </div>
+            <div class="content-box">
+                <p>
+                    Persatuan dan kesatuan bangsa merupakan landasan
+                    penting bagi keberlangsungan kehidupan bernegara.
+                    Kedaulatan nasional dan kemandirian bangsa menjadi
+                    bagian yang tidak terpisahkan dari cita-cita Indonesia.
+                </p>
+                <p>
+                    Melalui ruang literasi ini, berbagai persoalan
+                    kebangsaan dipaparkan secara kritis dan terbuka,
+                    dengan perhatian pada kepentingan bangsa dan masa
+                    depan Indonesia.
+                </p>
+            </div>
 
-  <div class="intro">
-    <p>
-      Kesadaran kebangsaan merupakan landasan penting
-      dalam menjaga keberadaan Indonesia sebagai
-      bangsa yang bersatu, berdaulat, dan mandiri.
-      Masa depan bangsa membutuhkan pemikiran kritis,
-      tanggung jawab bersama, serta keberanian
-      menentukan arah kehidupan nasional.
-    </p>
-  </div>
-</section>
+            <h2 class="section-title">Artikel Pilihan</h2>
 
-<section class="article-area">
-  <div class="article-content">
+            <p class="section-intro">
+                Beberapa pemikiran dan tulisan mengenai persoalan
+                kebangsaan Indonesia.
+            </p>
 
-    <div class="section-heading">
-      <p class="small">Literasi dan Pemikiran</p>
-      <h2>Artikel Pilihan</h2>
-      <div class="line"></div>
-      <p>Gagasan dan pemikiran tentang persoalan kebangsaan Indonesia.</p>
-    </div>
+            <div class="article-grid">
 
-    <div class="article-grid">
+                <article class="article-card">
+                    <h3>Neo Divide et Impera: Strategi Memecah Belah Bangsa</h3>
+                    <p>
+                        Membahas strategi pemecahan persatuan bangsa
+                        dan kaitannya dengan kepentingan penguasaan
+                        sumber daya alam Indonesia.
+                    </p>
+                    <a class="read-more" href="artikel.html">
+                        Baca Artikel →
+                    </a>
+                </article>
 
-      <article class="article-card">
-        <div class="article-number">ARTIKEL 01</div>
-        <h3>Neo Divide et Impera: Strategi Memecah Belah Bangsa</h3>
-        <p>
-          Membahas strategi pemecahan persatuan bangsa
-          dan kaitannya dengan kepentingan penguasaan
-          sumber daya alam Indonesia.
-        </p>
-        <a class="read-more" href="artikel.html">
-          BACA SELENGKAPNYA →
-        </a>
-      </article>
+                <article class="article-card">
+                    <h3>Pendidikan Bukan Sekadar Kecerdasan</h3>
+                    <p>
+                        Pendidikan perlu dipahami lebih luas daripada
+                        sekadar penguasaan pengetahuan dan kemampuan
+                        mengingat informasi.
+                    </p>
+                    <a class="read-more" href="artikel.html">
+                        Baca Artikel →
+                    </a>
+                </article>
 
-      <article class="article-card">
-        <div class="article-number">ARTIKEL 02</div>
-        <h3>Pendidikan Bukan Sekadar Kecerdasan</h3>
-        <p>
-          Pemikiran tentang pendidikan, pemahaman,
-          dan pentingnya kesadaran dalam membangun
-          kualitas kehidupan bangsa.
-        </p>
-        <a class="read-more" href="artikel.html">
-          BACA SELENGKAPNYA →
-        </a>
-      </article>
+                <article class="article-card">
+                    <h3>Membangun Kembali Kedaulatan dan Kemandirian Bangsa</h3>
+                    <p>
+                        Pemikiran tentang pentingnya memperkuat
+                        kedaulatan nasional dan kemampuan bangsa
+                        menentukan masa depannya sendiri.
+                    </p>
+                    <a class="read-more" href="artikel.html">
+                        Baca Artikel →
+                    </a>
+                </article>
 
-      <article class="article-card">
-        <div class="article-number">ARTIKEL 03</div>
-        <h3>Membangun Kembali Kedaulatan dan Kemandirian Bangsa</h3>
-        <p>
-          Menguraikan pentingnya kedaulatan nasional,
-          kemandirian ekonomi, dan pengelolaan
-          sumber daya untuk kepentingan bangsa.
-        </p>
-        <a class="read-more" href="artikel.html">
-          BACA SELENGKAPNYA →
-        </a>
-      </article>
+            </div>
 
-    </div>
-
-    <div class="all-articles">
-      <a href="artikel.html">LIHAT SEMUA ARTIKEL</a>
-    </div>
-
-  </div>
-</section>
+        </div>
+    </section>
 
 </main>
 
 <footer>
-  <h2>NASIONAL KEBANGSAAN INDONESIA</h2>
-  <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
-  <p>Portal Literasi dan Pemikiran Kebangsaan Indonesia</p>
-
-  <div class="footer-bottom">
-    © 2026 NASIONAL KEBANGSAAN INDONESIA
-    <br>Seluruh hak cipta dilindungi.
-  </div>
+    <p class="footer-title">NASIONAL KEBANGSAAN INDONESIA</p>
+    <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
+    <p>Portal Literasi dan Pemikiran Kebangsaan</p>
+    <p>© 2026 Nasional Kebangsaan Indonesia</p>
 </footer>
 
 </body>
