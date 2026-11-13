@@ -1,515 +1,229 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Identitas, tujuan, dan ruang lingkup Portal Nasional Kebangsaan Indonesia.">
-<meta name="theme-color" content="#781d26">
-<title>Identitas | NASIONAL KEBANGSAAN INDONESIA</title>
-
-<style>
-:root {
-  --red: #781d26;
-  --red-dark: #50121a;
-  --gold: #c9a45c;
-  --navy: #172a40;
-  --cream: #f7f4ed;
-  --white: #ffffff;
-  --text: #292929;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.8;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.topline {
-  height: 5px;
-  background: linear-gradient(
-    to right, #c52b35 0 50%, #ffffff 50% 100%
-  );
-}
-
-header {
-  background: var(--red-dark);
-  color: white;
-  border-bottom: 3px solid var(--gold);
-}
-
-.header-inner {
-  max-width: 1150px;
-  margin: auto;
-  padding: 27px 22px;
-  text-align: center;
-}
-
-.brand {
-  color: var(--gold);
-  font-size: 13px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}
-
-header h1 {
-  font-size: clamp(27px, 5vw, 43px);
-  line-height: 1.2;
-  letter-spacing: 1px;
-  margin: 12px 0;
-}
-
-.tagline {
-  color: #eee1d1;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
-nav {
-  background: var(--navy);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 2px solid var(--gold);
-}
-
-.nav-inner {
-  max-width: 1150px;
-  margin: auto;
-  padding: 0 15px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav a {
-  display: block;
-  color: white;
-  padding: 13px 15px;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: .5px;
-  transition: .2s;
-}
-
-nav a:hover,
-nav a.active {
-  background: var(--red);
-  color: var(--gold);
-}
-
-.page-banner {
-  background: linear-gradient(
-    110deg,
-    rgba(48, 13, 19, .97),
-    rgba(23, 42, 64, .94)
-  );
-  color: white;
-  padding: 65px 22px;
-  text-align: center;
-  border-bottom: 5px solid var(--gold);
-}
-
-.page-banner .eyebrow {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.page-banner h2 {
-  font-size: clamp(29px, 5vw, 42px);
-  margin: 13px 0;
-}
-
-.page-banner p {
-  color: #e6e1dc;
-  font-size: 16px;
-}
-
-.container {
-  max-width: 950px;
-  margin: auto;
-  padding: 55px 22px;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section-heading .small {
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-
-.section-heading h2 {
-  color: var(--navy);
-  font-size: 28px;
-  margin: 8px 0;
-}
-
-.line {
-  width: 65px;
-  height: 3px;
-  background: var(--gold);
-  margin: 14px auto;
-}
-
-.content {
-  color: #484848;
-  font-size: 17px;
-  text-align: justify;
-}
-
-.content p {
-  margin-bottom: 19px;
-}
-
-.content strong {
-  color: var(--red);
-}
-
-.identity-box {
-  background: white;
-  border: 1px solid #e6dfd1;
-  border-left: 5px solid var(--red);
-  padding: 28px;
-  margin: 30px 0;
-}
-
-.identity-box h3 {
-  color: var(--red);
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.identity-box p {
-  color: #555;
-}
-
-.purpose-area {
-  background: white;
-}
-
-.purpose-grid {
-  max-width: 950px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.purpose-card {
-  background: var(--cream);
-  border: 1px solid #e6dfd1;
-  border-top: 4px solid var(--gold);
-  padding: 25px;
-}
-
-.purpose-card h3 {
-  color: var(--red);
-  font-size: 20px;
-  margin-bottom: 9px;
-}
-
-.purpose-card p {
-  color: #555;
-  font-size: 15px;
-}
-
-.closing {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 48px 22px;
-}
-
-.closing h2 {
-  color: var(--gold);
-  font-size: 25px;
-  margin-bottom: 13px;
-}
-
-.closing p {
-  max-width: 750px;
-  margin: auto;
-  color: #e5e5e5;
-}
-
-footer {
-  background: var(--red-dark);
-  color: white;
-  text-align: center;
-  padding: 38px 20px;
-  border-top: 4px solid var(--gold);
-}
-
-footer h2 {
-  font-size: 22px;
-  color: var(--gold);
-  letter-spacing: 2px;
-}
-
-footer p {
-  color: #e3d9d3;
-  font-size: 13px;
-  margin-top: 9px;
-}
-
-.footer-bottom {
-  margin-top: 23px;
-  padding-top: 17px;
-  border-top: 1px solid #ffffff30;
-  color: #c9bdb5;
-  font-size: 12px;
-}
-
-@media(max-width: 750px) {
-  nav a {
-    padding: 10px 9px;
-    font-size: 11px;
-  }
-
-  .purpose-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .container {
-    padding: 42px 19px;
-  }
-
-  .content {
-    font-size: 16px;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Identitas, tujuan, dan ruang lingkup Portal Nasional Kebangsaan Indonesia.">
+    <meta name="theme-color" content="#781d26">
+    <title>Identitas | NASIONAL KEBANGSAAN INDONESIA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="topline"></div>
-
 <header>
-  <div class="header-inner">
-    <div class="brand">Portal Literasi Kebangsaan</div>
-    <h1>NASIONAL KEBANGSAAN<br>INDONESIA</h1>
-    <p class="tagline">
-      PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
-    </p>
-  </div>
+    <div class="container header-inner">
+        <div class="site-title">NASIONAL KEBANGSAAN INDONESIA</div>
+        <div class="site-tagline">
+            PERSATUAN · KEDAULATAN · KEMANDIRIAN BANGSA
+        </div>
+    </div>
 </header>
 
 <nav>
-  <div class="nav-inner">
-    <a href="index.html">BERANDA</a>
-    <a href="identitas.html" class="active">IDENTITAS</a>
-    <a href="pemikiran.html">PEMIKIRAN</a>
-    <a href="tema.html">TEMA</a>
-    <a href="artikel.html">ARTIKEL</a>
-    <a href="katalog-buku.html">KATALOG BUKU</a>
-  </div>
+    <div class="container nav-inner">
+        <a href="index.html">Beranda</a>
+        <a href="identitas.html" class="active">Identitas</a>
+        <a href="pemikiran.html">Pemikiran</a>
+        <a href="artikel.html">Artikel & Opini</a>
+        <a href="katalog-buku.html">Katalog Buku</a>
+    </div>
 </nav>
 
 <main>
 
 <section class="page-banner">
-  <p class="eyebrow">Mengenal Portal</p>
-  <h2>Identitas Nasional Kebangsaan Indonesia</h2>
-  <p>Ruang Literasi dan Pemikiran Kebangsaan Indonesia</p>
+    <div class="container">
+        <h1>IDENTITAS NASIONAL KEBANGSAAN INDONESIA</h1>
+        <p>Ruang Literasi dan Pemikiran Kebangsaan Indonesia</p>
+    </div>
 </section>
 
-<section class="container">
+<section class="content-section">
+    <div class="container">
 
-  <div class="section-heading">
-    <p class="small">Tentang Portal</p>
-    <h2>Jati Diri dan Keberadaan</h2>
-    <div class="line"></div>
-  </div>
+        <h2 class="section-title">Jati Diri dan Keberadaan</h2>
 
-  <div class="content">
-    <p>
-      <strong>NASIONAL KEBANGSAAN INDONESIA</strong>
-      merupakan portal literasi, dokumentasi, dan
-      pengembangan pemikiran kebangsaan yang
-      berorientasi pada penguatan persatuan,
-      penegakan kedaulatan, serta pembangunan
-      kemandirian bangsa Indonesia.
-    </p>
+        <div class="content-box">
 
-    <p>
-      Portal ini menjadi ruang penyampaian gagasan,
-      pemikiran, artikel, opini, dan karya tulis yang
-      membahas berbagai persoalan kehidupan bangsa
-      dan negara. Pembahasannya mencakup identitas
-      nasional, persatuan dan kesatuan, kedaulatan
-      politik dan ekonomi, pengelolaan sumber daya
-      alam, serta arah masa depan Indonesia.
-    </p>
+            <p>
+                <strong>NASIONAL KEBANGSAAN INDONESIA</strong>
+                merupakan portal literasi, dokumentasi, dan
+                pengembangan pemikiran kebangsaan yang
+                berorientasi pada penguatan persatuan,
+                penegakan kedaulatan, serta pembangunan
+                kemandirian bangsa Indonesia.
+            </p>
 
-    <p>
-      Keberadaan portal ini didasarkan pada pandangan
-      bahwa kehidupan kebangsaan membutuhkan
-      kesadaran bersama. Persatuan tidak cukup hanya
-      dinyatakan sebagai semboyan, tetapi harus
-      diwujudkan melalui pemahaman, tanggung jawab,
-      keadilan, dan kepentingan nasional.
-    </p>
+            <p>
+                Portal ini menjadi ruang penyampaian gagasan,
+                pemikiran, artikel, opini, dan karya tulis yang
+                membahas berbagai persoalan kehidupan bangsa
+                dan negara. Pembahasannya mencakup identitas
+                nasional, persatuan dan kesatuan, kedaulatan
+                politik dan ekonomi, pengelolaan sumber daya
+                alam, serta arah masa depan Indonesia.
+            </p>
 
-    <div class="identity-box">
-      <h3>Identitas Utama</h3>
-      <p>
-        Nama: NASIONAL KEBANGSAAN INDONESIA
-        <br>
-        Bidang: Literasi dan Pemikiran Kebangsaan
-        <br>
-        Orientasi: Persatuan, Kedaulatan, dan Kemandirian Bangsa
-        <br>
-        Ruang Lingkup: Indonesia
-      </p>
+            <p>
+                Keberadaan portal ini didasarkan pada pandangan
+                bahwa kehidupan kebangsaan membutuhkan
+                kesadaran bersama. Persatuan tidak cukup hanya
+                dinyatakan sebagai semboyan, tetapi harus
+                diwujudkan melalui pemahaman, tanggung jawab,
+                keadilan, dan kepentingan nasional.
+            </p>
+
+        </div>
+
+        <div class="content-box">
+            <h2>Identitas Utama</h2>
+
+            <p>
+                <strong>Nama:</strong> NASIONAL KEBANGSAAN INDONESIA
+            </p>
+
+            <p>
+                <strong>Bidang:</strong> Literasi dan Pemikiran Kebangsaan
+            </p>
+
+            <p>
+                <strong>Orientasi:</strong> Persatuan, Kedaulatan,
+                dan Kemandirian Bangsa
+            </p>
+
+            <p>
+                <strong>Ruang Lingkup:</strong> Indonesia
+            </p>
+        </div>
+
     </div>
-  </div>
-
 </section>
 
-<section class="purpose-area">
-  <div class="container">
+<section class="content-section">
+    <div class="container">
 
-    <div class="section-heading">
-      <p class="small">Arah dan Tujuan</p>
-      <h2>Tujuan Pengembangan Portal</h2>
-      <div class="line"></div>
+        <h2 class="section-title">Tujuan Pengembangan Portal</h2>
+
+        <p class="section-intro">
+            Enam tujuan utama pengembangan Nasional Kebangsaan Indonesia.
+        </p>
+
+        <div class="purpose-grid">
+
+            <div class="purpose-card">
+                <h3>01. Literasi Kebangsaan</h3>
+                <p>
+                    Memperluas wawasan dan pemahaman masyarakat
+                    mengenai kehidupan kebangsaan dan berbagai
+                    persoalan nasional.
+                </p>
+            </div>
+
+            <div class="purpose-card">
+                <h3>02. Penguatan Persatuan</h3>
+                <p>
+                    Mengembangkan pemikiran yang mendorong
+                    persatuan dan kesatuan bangsa di tengah
+                    keberagaman masyarakat Indonesia.
+                </p>
+            </div>
+
+            <div class="purpose-card">
+                <h3>03. Kesadaran Kedaulatan</h3>
+                <p>
+                    Membangun pemahaman mengenai pentingnya
+                    kedaulatan nasional dalam menentukan arah
+                    politik, ekonomi, dan kehidupan bernegara.
+                </p>
+            </div>
+
+            <div class="purpose-card">
+                <h3>04. Kemandirian Bangsa</h3>
+                <p>
+                    Mendorong pemikiran tentang kemampuan
+                    bangsa dalam mengelola sumber daya dan
+                    menentukan masa depannya sendiri.
+                </p>
+            </div>
+
+            <div class="purpose-card">
+                <h3>05. Dokumentasi Pemikiran</h3>
+                <p>
+                    Menghimpun artikel, opini, dan karya tulis
+                    sebagai dokumentasi pemikiran mengenai
+                    berbagai persoalan kebangsaan.
+                </p>
+            </div>
+
+            <div class="purpose-card">
+                <h3>06. Ruang Pertukaran Gagasan</h3>
+                <p>
+                    Menyediakan ruang literasi untuk
+                    memperkenalkan gagasan dan pemikiran
+                    tentang kepentingan bangsa Indonesia.
+                </p>
+            </div>
+
+        </div>
+
     </div>
-
-    <div class="purpose-grid">
-
-      <div class="purpose-card">
-        <h3>01. Literasi Kebangsaan</h3>
-        <p>
-          Memperluas wawasan dan pemahaman masyarakat
-          mengenai kehidupan kebangsaan dan berbagai
-          persoalan nasional.
-        </p>
-      </div>
-
-      <div class="purpose-card">
-        <h3>02. Penguatan Persatuan</h3>
-        <p>
-          Mengembangkan pemikiran yang mendorong
-          persatuan dan kesatuan bangsa di tengah
-          keberagaman masyarakat Indonesia.
-        </p>
-      </div>
-
-      <div class="purpose-card">
-        <h3>03. Kesadaran Kedaulatan</h3>
-        <p>
-          Membangun pemahaman mengenai pentingnya
-          kedaulatan nasional dalam menentukan arah
-          politik, ekonomi, dan kehidupan bernegara.
-        </p>
-      </div>
-
-      <div class="purpose-card">
-        <h3>04. Kemandirian Bangsa</h3>
-        <p>
-          Mendorong pemikiran tentang kemampuan
-          bangsa dalam mengelola sumber daya dan
-          menentukan masa depannya sendiri.
-        </p>
-      </div>
-
-      <div class="purpose-card">
-        <h3>05. Dokumentasi Pemikiran</h3>
-        <p>
-          Menghimpun artikel, opini, dan karya tulis
-          sebagai dokumentasi pemikiran mengenai
-          berbagai persoalan kebangsaan.
-        </p>
-      </div>
-
-      <div class="purpose-card">
-        <h3>06. Ruang Pertukaran Gagasan</h3>
-        <p>
-          Menyediakan ruang literasi untuk
-          memperkenalkan gagasan dan pemikiran
-          tentang kepentingan bangsa Indonesia.
-        </p>
-      </div>
-
-    </div>
-  </div>
 </section>
 
-<section class="container">
-  <div class="section-heading">
-    <p class="small">Prinsip Dasar</p>
-    <h2>Orientasi Kebangsaan</h2>
-    <div class="line"></div>
-  </div>
+<section class="content-section">
+    <div class="container">
 
-  <div class="content">
-    <p>
-      Nasional Kebangsaan Indonesia menempatkan
-      kepentingan bangsa sebagai landasan dalam
-      membahas berbagai persoalan nasional.
-      Pemikiran kebangsaan perlu dibangun melalui
-      keterbukaan terhadap gagasan, ketajaman
-      memahami persoalan, dan tanggung jawab
-      terhadap kehidupan bersama.
-    </p>
+        <h2 class="section-title">Orientasi Kebangsaan</h2>
 
-    <p>
-      Perbedaan pandangan tidak seharusnya menjadi
-      alasan untuk merusak persatuan. Sebaliknya,
-      perbedaan perlu ditempatkan dalam kerangka
-      kepentingan nasional, penghormatan terhadap
-      keberagaman, dan komitmen menjaga keutuhan
-      Negara Kesatuan Republik Indonesia.
-    </p>
+        <div class="content-box">
 
-    <p>
-      Portal ini berdiri sebagai ruang literasi
-      yang mandiri dan terbuka dalam pengembangan
-      pemikiran kebangsaan Indonesia.
-    </p>
-  </div>
+            <p>
+                Nasional Kebangsaan Indonesia menempatkan
+                kepentingan bangsa sebagai landasan dalam
+                membahas berbagai persoalan nasional.
+                Pemikiran kebangsaan perlu dibangun melalui
+                keterbukaan terhadap gagasan, ketajaman
+                memahami persoalan, dan tanggung jawab
+                terhadap kehidupan bersama.
+            </p>
+
+            <p>
+                Perbedaan pandangan tidak seharusnya menjadi
+                alasan untuk merusak persatuan. Sebaliknya,
+                perbedaan perlu ditempatkan dalam kerangka
+                kepentingan nasional, penghormatan terhadap
+                keberagaman, dan komitmen menjaga keutuhan
+                Negara Kesatuan Republik Indonesia.
+            </p>
+
+            <p>
+                Portal ini berdiri sebagai ruang literasi
+                yang mandiri dan terbuka dalam pengembangan
+                pemikiran kebangsaan Indonesia.
+            </p>
+
+        </div>
+
+    </div>
 </section>
 
 <section class="closing">
-  <h2>Persatuan · Kedaulatan · Kemandirian</h2>
-  <p>
-    Membangun kesadaran kebangsaan merupakan bagian
-    dari tanggung jawab bersama untuk menjaga
-    persatuan, memperkuat kedaulatan, dan mewujudkan
-    masa depan Indonesia yang mandiri.
-  </p>
+    <h2>Persatuan · Kedaulatan · Kemandirian</h2>
+    <p>
+        Membangun kesadaran kebangsaan merupakan bagian
+        dari tanggung jawab bersama untuk menjaga
+        persatuan, memperkuat kedaulatan, dan mewujudkan
+        masa depan Indonesia yang mandiri.
+    </p>
 </section>
 
 </main>
 
 <footer>
-  <h2>NASIONAL KEBANGSAAN INDONESIA</h2>
-  <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
-  <p>Portal Literasi dan Pemikiran Kebangsaan Indonesia</p>
-
-  <div class="footer-bottom">
-    © 2026 NASIONAL KEBANGSAAN INDONESIA
-    <br>Seluruh hak cipta dilindungi.
-  </div>
+    <p class="footer-title">NASIONAL KEBANGSAAN INDONESIA</p>
+    <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
+    <p>Portal Literasi dan Pemikiran Kebangsaan Indonesia</p>
+    <p>© 2026 Nasional Kebangsaan Indonesia</p>
 </footer>
 
 </body>
