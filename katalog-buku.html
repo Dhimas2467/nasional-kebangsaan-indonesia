@@ -1,299 +1,602 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Buku | JERAT +62</title>
-    <meta name="description" content="Katalog pustaka dan karya tulis kebangsaan Indonesia.">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Katalog Buku | JERAT +62</title>
+
+<meta name="description" content="Katalog buku JERAT +62. Dokumentasi pemikiran kritis mengenai kebangsaan, kedaulatan, moralitas politik, dan kepentingan rakyat Indonesia.">
+
+<meta name="theme-color" content="#171717">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* KATALOG BUKU */
+
+.catalog-intro {
+line-height: 1.8;
+text-align: justify;
+margin-bottom: 28px;
+}
+
+.catalog-grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 25px;
+margin-top: 25px;
+}
+
+.book-card {
+display: flex;
+align-items: flex-start;
+gap: 24px;
+padding: 22px;
+background: #fff;
+border: 1px solid #ded6c8;
+border-radius: 10px;
+box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+transition: 0.3s ease;
+}
+
+.book-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.book-cover {
+flex: 0 0 155px;
+width: 155px;
+}
+
+.book-cover img {
+display: block;
+width: 100%;
+aspect-ratio: 2 / 3;
+object-fit: cover;
+border-radius: 4px;
+box-shadow: 3px 5px 12px rgba(0,0,0,0.22);
+}
+
+.book-info {
+flex: 1;
+min-width: 0;
+}
+
+.book-category {
+display: inline-block;
+color: #98752e;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.5px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+
+.book-info h2 {
+font-size: 20px;
+line-height: 1.4;
+color: #252525;
+margin: 0 0 12px;
+}
+
+.book-author {
+font-size: 13px;
+color: #666;
+}
+
+.book-description {
+font-size: 14px;
+line-height: 1.8;
+color: #444;
+text-align: justify;
+}
+
+.book-abstract {
+margin: 15px 0;
+border-top: 1px solid #e5dfd4;
+border-bottom: 1px solid #e5dfd4;
+padding: 12px 0;
+}
+
+.book-abstract summary {
+cursor: pointer;
+color: #98752e;
+font-size: 13px;
+font-weight: bold;
+}
+
+.abstract-content {
+padding-top: 15px;
+font-size: 14px;
+line-height: 1.8;
+color: #444;
+text-align: justify;
+}
+
+.abstract-content h3 {
+color: #98752e;
+text-align: center;
+}
+
+.read-more {
+display: inline-block;
+margin-top: 10px;
+padding: 11px 18px;
+background: #98752e;
+color: #fff;
+text-decoration: none;
+font-size: 13px;
+font-weight: bold;
+border-radius: 4px;
+transition: 0.3s;
+}
+
+.read-more:hover {
+background: #72551e;
+}
+
+/* TAMPILAN MOBILE */
+
+@media (max-width: 600px) {
+
+.book-card {
+gap: 14px;
+padding: 13px;
+}
+
+.book-cover {
+flex: 0 0 105px;
+width: 105px;
+}
+
+.book-info h2 {
+font-size: 15px;
+}
+
+.book-description {
+font-size: 12px;
+line-height: 1.6;
+}
+
+.book-category {
+font-size: 10px;
+}
+
+.book-author {
+font-size: 12px;
+}
+
+.book-abstract summary {
+font-size: 11px;
+}
+
+.abstract-content {
+font-size: 12px;
+}
+
+.read-more {
+font-size: 11px;
+padding: 9px 12px;
+}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="header-inner">
-        <div class="site-title">JERAT +62</div>
-        <div class="site-tagline">Bersuara untuk Kebenaran. Bergerak untuk Keadilan. Berdiri untuk Kepentingan Rakyat.</div>
-    </div>
+<div class="header-inner">
+<div class="site-title">JERAT +62</div>
+<div class="site-tagline">
+Bersuara untuk Kebenaran. Bergerak untuk Keadilan.
+Berdiri untuk Kepentingan Rakyat.
+</div>
+</div>
 </header>
 
 <nav>
-    <div class="nav-inner">
-        <a href="index.html" class="home-button" aria-label="Beranda" title="Beranda">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 10.5L12 3l9 7.5"></path>
-                <path d="M5.5 9.5V21h13V9.5"></path>
-                <path d="M9.5 21v-7h5v7"></path>
-            </svg>
-        </a>
-        <a href="identitas.html">Identitas</a>
-        <a href="pemikiran.html">Pemikiran</a>
-        <a href="katalog-buku.html" class="active">Katalog Buku</a>
-    </div>
+<div class="nav-inner">
+
+<a href="index.html"
+class="home-button"
+aria-label="Beranda"
+title="Beranda">
+
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M3 10.5L12 3l9 7.5"></path>
+<path d="M5.5 9.5V21h13V9.5"></path>
+<path d="M9.5 21v-7h5v7"></path>
+</svg>
+</a>
+
+<a href="identitas.html">Identitas</a>
+<a href="pemikiran.html">Pemikiran</a>
+<a href="katalog-buku.html" class="active">Katalog Buku</a>
+
+</div>
 </nav>
 
 <main>
-    <section class="page-banner">
-        <div class="container">
-            <h1>Katalog Buku</h1>
-            <p>Pustaka Kebangsaan Indonesia</p>
-        </div>
-    </section>
 
-    <section class="content-section">
-        <div class="container">
+<section class="page-banner">
+<div class="container">
+<h1>Katalog Buku</h1>
+<p>Pustaka Pemikiran Kebangsaan Indonesia</p>
+</div>
+</section>
 
-            <h2 class="section-title">Daftar Buku</h2>
-         
+<section class="content-section">
+<div class="container">
+
+<h2 class="section-title">Dokumentasi Karya Tulis</h2>
+
+<p class="catalog-intro">
+Katalog ini memuat karya tulis yang membahas
+berbagai persoalan kebangsaan, kedaulatan,
+kehidupan politik, moralitas, serta kepentingan
+rakyat Indonesia. Setiap buku merupakan bagian
+dari dokumentasi pemikiran kritis untuk
+memahami dan menyikapi berbagai persoalan
+kehidupan berbangsa dan bernegara.
+</p>
+
 <div class="catalog-grid">
 
-    <article class="book-card">
-        <span class="book-category">Kedaulatan dan Kemandirian Bangsa</span>
-
-        <h2>MUSUH BESAR BANGSA INDONESIA</h2>
-
-        <p><strong>Penulis:</strong> Dhimas Purnomo</p>
-
-        <p>
-            Buku ini membahas berbagai ancaman terhadap kemerdekaan,
-            kedaulatan, dan kemandirian bangsa Indonesia dalam
-            perkembangan dunia modern. Pembahasan meliputi neo
-            imperialisme, neo kolonialisme, strategi neo divide et
-            impera, penguasaan sumber daya alam, oligarki, korupsi,
-            serta berbagai persoalan internal yang dapat melemahkan
-            kekuatan bangsa.
-        </p>
-
-        <details class="book-abstract">
-            <summary><strong>BACA ABSTRAKSI LENGKAP</strong></summary>
-
-            <div class="abstract-content">
-
-                <h3>ABSTRAKSI</h3>
-
-                <p>
-                    MUSUH BESAR BANGSA INDONESIA membahas berbagai ancaman
-                    terhadap kemerdekaan, kedaulatan, dan kemandirian bangsa
-                    Indonesia dalam perkembangan dunia modern. Buku ini
-                    berangkat dari pemahaman bahwa berakhirnya penjajahan
-                    kolonial secara formal tidak dengan sendirinya
-                    menghilangkan seluruh bentuk penguasaan terhadap suatu
-                    bangsa. Perubahan sistem ekonomi, perkembangan teknologi,
-                    hubungan politik internasional, serta persaingan
-                    penguasaan sumber daya telah melahirkan bentuk-bentuk
-                    dominasi baru yang dapat membatasi kemampuan suatu negara
-                    menentukan arah kehidupannya sendiri.
-                </p>
-
-                <p>
-                    Pembahasan diawali dengan pemaknaan kemerdekaan dan
-                    kedaulatan Indonesia, kemudian menelusuri transformasi
-                    penjajahan dari penguasaan wilayah secara langsung menuju
-                    bentuk-bentuk dominasi yang berlangsung melalui sistem
-                    ekonomi, keuangan, perdagangan, teknologi, informasi,
-                    dan kebijakan politik. Konsep neo imperialisme dan neo
-                    kolonialisme digunakan untuk menjelaskan kemungkinan
-                    terjadinya penguasaan tanpa pendudukan langsung.
-                    Selanjutnya, buku ini membahas strategi
-                    <em>neo divide et impera</em>, yaitu pola pemecahan
-                    persatuan yang dapat dimanfaatkan untuk memperlemah
-                    kekuatan bangsa dan membuka ruang bagi kepentingan
-                    tertentu. Pembahasan tersebut tetap membedakan antara
-                    fakta sejarah, gejala sosial, analisis kepentingan,
-                    dan dugaan yang belum terbukti.
-                </p>
-
-                <p>
-                    Salah satu pokok utama buku ini adalah penguasaan sumber
-                    daya alam Indonesia. Kekayaan mineral, energi, hutan,
-                    tanah, laut, dan berbagai potensi ekonomi nasional
-                    memiliki nilai strategis, tetapi manfaatnya sangat
-                    bergantung pada tata kelola dan kemampuan bangsa
-                    mengolahnya. Ketergantungan terhadap modal, teknologi,
-                    pasar, industri, serta sistem keuangan dapat
-                    mempersempit ruang kebijakan apabila tidak diimbangi
-                    dengan penguatan kapasitas nasional. Oleh sebab itu,
-                    penguasaan sumber daya tidak hanya dibahas dari sisi
-                    kepemilikan dan produksi, tetapi juga dari aspek nilai
-                    tambah, penerimaan negara, perlindungan lingkungan,
-                    serta kesejahteraan masyarakat.
-                </p>
-
-                <p>
-                    Buku ini memberikan perhatian khusus terhadap ancaman
-                    yang berasal dari dalam negeri. Korupsi, penyalahgunaan
-                    jabatan, oligarki ekonomi dan politik, konflik
-                    kepentingan, serta kolusi antara kekuatan bisnis dan
-                    kekuasaan dapat mengalihkan kekayaan dan kewenangan
-                    negara dari tujuan kepentingan umum. Dalam konteks
-                    tersebut, istilah penjajahan oleh bangsa sendiri
-                    digunakan sebagai gambaran kritis terhadap praktik
-                    kekuasaan yang merugikan rakyat dan melemahkan amanat
-                    kemerdekaan. Dengan demikian, ancaman terhadap
-                    kedaulatan tidak hanya dilihat sebagai persoalan
-                    hubungan Indonesia dengan kekuatan luar, tetapi juga
-                    sebagai persoalan integritas penyelenggaraan negara.
-                </p>
-
-                <p>
-                    Pemaparan disusun dengan menggunakan peraturan
-                    perundang-undangan, data pemerintah, laporan lembaga
-                    internasional, laporan organisasi masyarakat sipil,
-                    dan literatur yang relevan. Sumber-sumber tersebut
-                    digunakan untuk mendukung penjelasan mengenai kondisi
-                    ekonomi, politik, sosial, pengelolaan sumber daya,
-                    korupsi, dan hubungan internasional. Fakta, penilaian,
-                    serta kesimpulan dibedakan agar pembahasan tidak
-                    terjebak pada generalisasi atau tuduhan yang tidak
-                    memiliki dasar memadai.
-                </p>
-
-                <p>
-                    Pada bagian akhir, buku ini menawarkan arah pemikiran
-                    untuk membangun kembali kedaulatan dan kemandirian
-                    Indonesia melalui penguatan industri dan teknologi
-                    nasional, kemandirian pangan dan energi, reformasi tata
-                    kelola ekonomi dan politik, pemberantasan korupsi,
-                    perlindungan hak rakyat, serta penguatan persatuan
-                    nasional. Secara keseluruhan, buku ini menegaskan bahwa
-                    kemerdekaan harus diwujudkan dalam kemampuan nyata
-                    bangsa untuk mengelola kekayaan, menentukan kebijakan,
-                    melindungi rakyat, dan menjaga kepentingan nasional.
-                    Kedaulatan bukan sekadar pengakuan sebagai negara
-                    merdeka, melainkan kemampuan untuk berdiri mandiri,
-                    mengambil keputusan secara bertanggung jawab, dan
-                    memastikan seluruh kekuatan nasional digunakan bagi
-                    kesejahteraan bangsa Indonesia.
-                </p>
-
-                <h3>Kata Kunci</h3>
-
-                <p>
-                    Kemerdekaan, kedaulatan nasional, neo imperialisme,
-                    neo kolonialisme, sumber daya alam, oligarki, korupsi,
-                    perpecahan bangsa, kemandirian nasional.
-                </p>
-
-            </div>
-        </details>
-
-        <a
-            class="read-more"
-            href="https://drive.google.com/file/d/1ljONbdB1vWF99myydg7o1azlwaqaHVbN/view?usp=drivesdk"
-            target="_blank"
-            rel="noopener noreferrer">
-            BACA BUKU (PDF) →
-        </a>
-
-    </article>
+<!-- BUKU PERTAMA -->
 
 <article class="book-card">
-<span class="book-category">Kedaulatan dan Kemandirian Bangsa</span>
-<h2>KRISIS MORALITAS DALAM KEHIDUPAN POLITIK INDONESIA</h2>
-<p><strong>Penulis:</strong> Dhimas Purnomo</p>
-<p>
-Krisis moral dalam kehidupan politik Indonesia merupakan persoalan mendasar yang tidak dapat dipahami hanya melalui kelemahan sistem pemerintahan, ketidaksempurnaan peraturan perundang-undangan, atau dinamika persaingan kekuasaan. Di balik berbagai persoalan politik terdapat persoalan manusia yang menjalankan kekuasaan, menentukan kebijakan, mengelola kewenangan, dan mengambil keputusan yang mempengaruhi kehidupan masyarakat. 
+
+<div class="book-cover">
+<img
+src="musuh-besar.jpg"
+alt="Cover Musuh Besar Bangsa Indonesia"
+loading="eager">
+</div>
+
+<div class="book-info">
+
+<span class="book-category">
+Kedaulatan dan Kemandirian Bangsa
+</span>
+
+<h2>MUSUH BESAR BANGSA INDONESIA</h2>
+
+<p class="book-author">
+<strong>Penulis:</strong> Dhimas Purnomo
 </p>
+
+<p class="book-description">
+Buku ini membahas berbagai ancaman terhadap
+kemerdekaan, kedaulatan, dan kemandirian
+bangsa Indonesia dalam perkembangan dunia
+modern. Pembahasan meliputi neo imperialisme,
+neo kolonialisme, strategi neo divide et
+impera, penguasaan sumber daya alam, oligarki,
+korupsi, serta berbagai persoalan internal
+yang dapat melemahkan kekuatan bangsa.
+</p>
+
 <details class="book-abstract">
-<summary><strong>BACA ABSTRAKSI LENGKAP</strong></summary>
+<summary>BACA ABSTRAKSI LENGKAP</summary>
+
 <div class="abstract-content">
+
 <h3>ABSTRAKSI</h3>
+
 <p>
-MUSUH BESAR BANGSA INDONESIA membahas berbagai ancaman
-terhadap kemerdekaan, kedaulatan, dan kemandirian bangsa
-Indonesia dalam perkembangan dunia modern. Buku ini
-berangkat dari pemahaman bahwa berakhirnya penjajahan
-kolonial secara formal tidak dengan sendirinya
-menghilangkan seluruh bentuk penguasaan terhadap suatu
-bangsa. Perubahan sistem ekonomi, perkembangan teknologi,
-hubungan politik internasional, serta persaingan
-penguasaan sumber daya telah melahirkan bentuk-bentuk
-dominasi baru yang dapat membatasi kemampuan suatu negara
-menentukan arah kehidupannya sendiri.
+MUSUH BESAR BANGSA INDONESIA membahas
+berbagai ancaman terhadap kemerdekaan,
+kedaulatan, dan kemandirian bangsa
+Indonesia dalam perkembangan dunia
+modern. Buku ini berangkat dari
+pemahaman bahwa berakhirnya penjajahan
+kolonial secara formal tidak dengan
+sendirinya menghilangkan seluruh
+bentuk penguasaan terhadap suatu
+bangsa. Perubahan sistem ekonomi,
+perkembangan teknologi, hubungan
+politik internasional, serta
+persaingan penguasaan sumber daya
+telah melahirkan bentuk-bentuk
+dominasi baru yang dapat membatasi
+kemampuan suatu negara menentukan
+arah kehidupannya sendiri.
 </p>
+
 <p>
-Pembahasan diawali dengan pemaknaan kemerdekaan dan
-kedaulatan Indonesia, kemudian menelusuri transformasi
-penjajahan dari penguasaan wilayah secara langsung menuju
-bentuk-bentuk dominasi yang berlangsung melalui sistem
-ekonomi, keuangan, perdagangan, teknologi, informasi,
-dan kebijakan politik. Konsep neo imperialisme dan neo
-kolonialisme digunakan untuk menjelaskan kemungkinan
-terjadinya penguasaan tanpa pendudukan langsung.
-Selanjutnya, buku ini membahas strategi
-<em>neo divide et impera</em>, yaitu pola pemecahan
-persatuan yang dapat dimanfaatkan untuk memperlemah
-kekuatan bangsa dan membuka ruang bagi kepentingan
-tertentu. Pembahasan tersebut tetap membedakan antara
-fakta sejarah, gejala sosial, analisis kepentingan,
-dan dugaan yang belum terbukti.
+Pembahasan diawali dengan pemaknaan
+kemerdekaan dan kedaulatan Indonesia,
+kemudian menelusuri transformasi
+penjajahan dari penguasaan wilayah
+secara langsung menuju bentuk-bentuk
+dominasi yang berlangsung melalui
+sistem ekonomi, keuangan, perdagangan,
+teknologi, informasi, dan kebijakan
+politik. Konsep neo imperialisme dan
+neo kolonialisme digunakan untuk
+menjelaskan kemungkinan terjadinya
+penguasaan tanpa pendudukan langsung.
+Selanjutnya, buku ini membahas
+strategi <em>neo divide et impera</em>,
+yaitu pola pemecahan persatuan yang
+dapat dimanfaatkan untuk memperlemah
+kekuatan bangsa dan membuka ruang
+bagi kepentingan tertentu.
 </p>
+
 <p>
-Salah satu pokok utama buku ini adalah penguasaan sumber
-daya alam Indonesia. Kekayaan mineral, energi, hutan,
-tanah, laut, dan berbagai potensi ekonomi nasional
-memiliki nilai strategis, tetapi manfaatnya sangat
-bergantung pada tata kelola dan kemampuan bangsa
-mengolahnya. Ketergantungan terhadap modal, teknologi,
-pasar, industri, serta sistem keuangan dapat
-mempersempit ruang kebijakan apabila tidak diimbangi
-dengan penguatan kapasitas nasional. Oleh sebab itu,
-penguasaan sumber daya tidak hanya dibahas dari sisi
-kepemilikan dan produksi, tetapi juga dari aspek nilai
-tambah, penerimaan negara, perlindungan lingkungan,
-serta kesejahteraan masyarakat.
+Salah satu pokok utama buku ini adalah
+penguasaan sumber daya alam Indonesia.
+Kekayaan mineral, energi, hutan, tanah,
+laut, dan berbagai potensi ekonomi
+nasional memiliki nilai strategis,
+tetapi manfaatnya sangat bergantung
+pada tata kelola dan kemampuan bangsa
+mengolahnya. Ketergantungan terhadap
+modal, teknologi, pasar, industri,
+serta sistem keuangan dapat
+mempersempit ruang kebijakan apabila
+tidak diimbangi dengan penguatan
+kapasitas nasional. Oleh sebab itu,
+penguasaan sumber daya tidak hanya
+dibahas dari sisi kepemilikan dan
+produksi, tetapi juga dari aspek
+nilai tambah, penerimaan negara,
+perlindungan lingkungan, serta
+kesejahteraan masyarakat.
 </p>
+
 <p>
-Buku ini memberikan perhatian khusus terhadap ancaman
-yang berasal dari dalam negeri. Korupsi, penyalahgunaan
-jabatan, oligarki ekonomi dan politik, konflik
-kepentingan, serta kolusi antara kekuatan bisnis dan
-kekuasaan dapat mengalihkan kekayaan dan kewenangan
-negara dari tujuan kepentingan umum. Dalam konteks
-tersebut, istilah penjajahan oleh bangsa sendiri
-digunakan sebagai gambaran kritis terhadap praktik
-kekuasaan yang merugikan rakyat dan melemahkan amanat
-kemerdekaan. Dengan demikian, ancaman terhadap
-kedaulatan tidak hanya dilihat sebagai persoalan
-hubungan Indonesia dengan kekuatan luar, tetapi juga
-sebagai persoalan integritas penyelenggaraan negara.
+Buku ini memberikan perhatian khusus
+terhadap ancaman yang berasal dari
+dalam negeri. Korupsi, penyalahgunaan
+jabatan, oligarki ekonomi dan politik,
+konflik kepentingan, serta kolusi
+antara kekuatan bisnis dan kekuasaan
+dapat mengalihkan kekayaan dan
+kewenangan negara dari tujuan
+kepentingan umum. Dalam konteks
+tersebut, istilah penjajahan oleh
+bangsa sendiri digunakan sebagai
+gambaran kritis terhadap praktik
+kekuasaan yang merugikan rakyat dan
+melemahkan amanat kemerdekaan.
 </p>
+
 <p>
-Pemaparan disusun dengan menggunakan peraturan
-perundang-undangan, data pemerintah, laporan lembaga
-internasional, laporan organisasi masyarakat sipil,
-dan literatur yang relevan. Sumber-sumber tersebut
-digunakan untuk mendukung penjelasan mengenai kondisi
-ekonomi, politik, sosial, pengelolaan sumber daya,
-korupsi, dan hubungan internasional. Fakta, penilaian,
-serta kesimpulan dibedakan agar pembahasan tidak
-terjebak pada generalisasi atau tuduhan yang tidak
-memiliki dasar memadai.
+Pemaparan disusun dengan menggunakan
+peraturan perundang-undangan, data
+pemerintah, laporan lembaga
+internasional, laporan organisasi
+masyarakat sipil, dan literatur yang
+relevan. Sumber-sumber tersebut
+digunakan untuk mendukung penjelasan
+mengenai kondisi ekonomi, politik,
+sosial, pengelolaan sumber daya,
+korupsi, dan hubungan internasional.
+Fakta, penilaian, serta kesimpulan
+dibedakan agar pembahasan tidak
+terjebak pada generalisasi atau
+tuduhan yang tidak memiliki dasar
+memadai.
 </p>
+
 <p>
-Pada bagian akhir, buku ini menawarkan arah pemikiran
-untuk membangun kembali kedaulatan dan kemandirian
-Indonesia melalui penguatan industri dan teknologi
-nasional, kemandirian pangan dan energi, reformasi tata
-kelola ekonomi dan politik, pemberantasan korupsi,
-perlindungan hak rakyat, serta penguatan persatuan
-nasional. Secara keseluruhan, buku ini menegaskan bahwa
-kemerdekaan harus diwujudkan dalam kemampuan nyata
-bangsa untuk mengelola kekayaan, menentukan kebijakan,
-melindungi rakyat, dan menjaga kepentingan nasional.
-Kedaulatan bukan sekadar pengakuan sebagai negara
-merdeka, melainkan kemampuan untuk berdiri mandiri,
-mengambil keputusan secara bertanggung jawab, dan
-memastikan seluruh kekuatan nasional digunakan bagi
-kesejahteraan bangsa Indonesia.
+Pada bagian akhir, buku ini
+menawarkan arah pemikiran untuk
+membangun kembali kedaulatan dan
+kemandirian Indonesia melalui
+penguatan industri dan teknologi
+nasional, kemandirian pangan dan
+energi, reformasi tata kelola
+ekonomi dan politik, pemberantasan
+korupsi, perlindungan hak rakyat,
+serta penguatan persatuan nasional.
+Secara keseluruhan, buku ini
+menegaskan bahwa kemerdekaan harus
+diwujudkan dalam kemampuan nyata
+bangsa untuk mengelola kekayaan,
+menentukan kebijakan, melindungi
+rakyat, dan menjaga kepentingan
+nasional.
 </p>
+
 <h3>Kata Kunci</h3>
+
 <p>
-Kemerdekaan, kedaulatan nasional, neo imperialisme,
-neo kolonialisme, sumber daya alam, oligarki, korupsi,
-perpecahan bangsa, kemandirian nasional.
+Kemerdekaan, kedaulatan nasional,
+neo imperialisme, neo kolonialisme,
+sumber daya alam, oligarki, korupsi,
+perpecahan bangsa, kemandirian
+nasional.
 </p>
+
 </div>
 </details>
+
+<a
+class="read-more"
+href="https://drive.google.com/file/d/1ljONbdB1vWF99myydg7o1azlwaqaHVbN/view?usp=drivesdk"
+target="_blank"
+rel="noopener noreferrer">
+BACA BUKU (PDF) →
+</a>
+
+</div>
+</article>
+
+
+<!-- BUKU KEDUA -->
+
+<article class="book-card">
+
+<div class="book-cover">
+<img
+src="krisis-moral.jpg"
+alt="Cover Krisis Moralitas dalam Kehidupan Politik Indonesia"
+loading="eager">
+</div>
+
+<div class="book-info">
+
+<span class="book-category">
+Kedaulatan dan Kemandirian Bangsa
+</span>
+
+<h2>
+KRISIS MORALITAS DALAM KEHIDUPAN
+POLITIK INDONESIA
+</h2>
+
+<p class="book-author">
+<strong>Penulis:</strong> Dhimas Purnomo
+</p>
+
+<p class="book-description">
+Krisis moral dalam kehidupan politik
+Indonesia merupakan persoalan mendasar
+yang tidak dapat dipahami hanya melalui
+kelemahan sistem pemerintahan,
+ketidaksempurnaan peraturan perundang-
+undangan, atau dinamika persaingan
+kekuasaan. Di balik berbagai persoalan
+politik terdapat persoalan manusia yang
+menjalankan kekuasaan, menentukan
+kebijakan, mengelola kewenangan, dan
+mengambil keputusan yang mempengaruhi
+kehidupan masyarakat.
+</p>
+
+<details class="book-abstract">
+<summary>BACA ABSTRAKSI LENGKAP</summary>
+
+<div class="abstract-content">
+
+<h3>ABSTRAKSI</h3>
+
+<p>
+KRISIS MORALITAS DALAM KEHIDUPAN
+POLITIK INDONESIA membahas
+persoalan moralitas sebagai
+salah satu persoalan mendasar
+dalam kehidupan politik dan
+penyelenggaraan pemerintahan.
+Kehidupan politik tidak hanya
+berkaitan dengan sistem kekuasaan,
+peraturan perundang-undangan,
+lembaga negara, dan mekanisme
+pemerintahan, tetapi juga
+menyangkut kualitas moral manusia
+yang menjalankan kewenangan dan
+menentukan arah kebijakan publik.
+</p>
+
+<p>
+Kekuasaan pada hakikatnya
+merupakan amanat yang harus
+dijalankan dengan tanggung jawab.
+Kewenangan yang dimiliki oleh
+penyelenggara negara seharusnya
+digunakan untuk melindungi
+kepentingan masyarakat,
+mewujudkan keadilan, dan
+meningkatkan kesejahteraan
+rakyat. Namun, ketika kekuasaan
+lebih banyak diarahkan untuk
+kepentingan pribadi, kelompok,
+atau golongan tertentu, kehidupan
+politik dapat kehilangan
+landasan moralnya.
+</p>
+
+<p>
+Pembahasan buku ini mencakup
+hakikat moralitas dalam kehidupan
+politik, hubungan antara
+kekuasaan dan tanggung jawab,
+integritas penyelenggara negara,
+kejujuran dalam menjalankan
+kewenangan, serta berbagai
+bentuk penyimpangan moral
+yang dapat merusak kehidupan
+demokrasi. Korupsi, penyalahgunaan
+jabatan, konflik kepentingan,
+politik transaksional, manipulasi
+kepentingan publik, dan
+penyalahgunaan kepercayaan
+masyarakat menjadi bagian
+dari persoalan yang dibahas.
+</p>
+
+<p>
+Buku ini juga menempatkan
+masyarakat sebagai bagian
+penting dalam kehidupan politik.
+Kesadaran politik, tanggung
+jawab warga negara, keberanian
+menyampaikan kebenaran, serta
+kemampuan menilai tindakan
+kekuasaan berdasarkan
+pertimbangan moral merupakan
+unsur yang diperlukan dalam
+menjaga kehidupan demokrasi.
+Masyarakat tidak seharusnya
+hanya menjadi objek kebijakan,
+tetapi juga memiliki tanggung
+jawab dalam mengawasi dan
+menjaga arah penyelenggaraan
+kehidupan bernegara.
+</p>
+
+<p>
+Pemaparan selanjutnya diarahkan
+pada hubungan antara kesadaran
+moral dan kualitas kehidupan
+politik. Perubahan kehidupan
+politik tidak cukup hanya
+dilakukan melalui pergantian
+pemimpin, pembentukan peraturan
+baru, atau perubahan struktur
+kelembagaan. Perubahan tersebut
+membutuhkan kesadaran moral
+yang tercermin dalam pikiran,
+sikap, keputusan, dan tindakan
+manusia yang terlibat di dalamnya.
+</p>
+
+<p>
+Secara keseluruhan, buku ini
+menegaskan bahwa moralitas
+merupakan landasan penting
+dalam kehidupan politik.
+Kekuasaan harus dijalankan
+dengan integritas, tanggung
+jawab, kejujuran, dan
+keberpihakan pada kepentingan
+rakyat. Kehidupan politik yang
+bermartabat hanya dapat
+diwujudkan apabila kesadaran
+moral menjadi dasar dalam
+menjalankan kekuasaan,
+menentukan kebijakan, dan
+membangun hubungan antara
+negara dan masyarakat.
+</p>
+
+<h3>Kata Kunci</h3>
+
+<p>
+Moralitas politik, kesadaran
+moral, kekuasaan, tanggung jawab,
+integritas, demokrasi, korupsi,
+etika politik, kepentingan rakyat.
+</p>
+
+</div>
+</details>
+
 <a
 class="read-more"
 href="https://drive.google.com/file/d/1IO7MyIQQ3cj6HEtYMOSEXqB1VapXii2N/view?usp=drivesdk"
@@ -301,36 +604,72 @@ target="_blank"
 rel="noopener noreferrer">
 BACA BUKU (PDF) →
 </a>
+
+</div>
 </article>
 
-    
 </div>
 
-            <div class="closing">
-                <h2>Dokumentasi Pemikiran untuk Bangsa</h2>
-                <p>
-                    Pustaka kebangsaan menjadi ruang untuk menyimpan,
-                    mengembangkan, dan menyebarluaskan pemikiran
-                    mengenai masa depan Indonesia.
-                </p>
-            </div>
 
-        </div>
-    </section>
+<!-- PENUTUP -->
+
+<div class="closing">
+
+<h2>Dokumentasi Pemikiran untuk Bangsa</h2>
+
+<p>
+JERAT +62 menjadi ruang dokumentasi,
+penyampaian, dan penyebarluasan pemikiran
+kritis mengenai kehidupan kebangsaan.
+Setiap karya tulis merupakan bagian dari
+upaya membangun kesadaran masyarakat
+terhadap kebenaran, keadilan, kedaulatan,
+dan kepentingan rakyat Indonesia.
+</p>
+
+</div>
+
+</div>
+</section>
+
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
-    <div class="footer-title">JERITAN RAKYAT TERTINDAS</div>
-    <p>Persatuan · Kedaulatan · Kemandirian Bangsa</p>
-    <p>&copy; 2026 Nasional Kebangsaan Indonesia</p>
+
+<div class="footer-title">
+JERITAN RAKYAT TERTINDAS
+</div>
+
+<p>
+Persatuan · Kedaulatan · Kemandirian Bangsa
+</p>
+
+<p>
+© 2026 JERAT +62
+</p>
+
 </footer>
 
-<a href="#" class="back-to-top" aria-label="Kembali ke atas" title="Back to Top">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 19V5"></path>
-        <path d="M5.5 11.5L12 5l6.5 6.5"></path>
-    </svg>
+
+<!-- BACK TO TOP -->
+
+<a
+href="#"
+class="back-to-top"
+aria-label="Kembali ke atas"
+title="Kembali ke atas">
+
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M12 19V5"></path>
+<path d="M5.5 11.5L12 5l6.5 6.5"></path>
+</svg>
+
 </a>
+
 <script src="bagikan.js"></script>
+
 </body>
 </html>
