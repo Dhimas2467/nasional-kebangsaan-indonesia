@@ -1,6 +1,16 @@
 const daftarArtikel = [
     {
 id: "nusantara",
+judul: "Pendidikan Moral Dan Karakter Kebangsaan",
+kategori: "Pemikiran Kebangsaan",
+penulis: "Dhimas Purnomo",
+tanggal: "18 November 2026",
+gambar: "pendidikan-karakter.jpg",
+ringkasan: "Pendidikan moral dan karakter kebangsaan merupakan bagian mendasar dalam membangun kehidupan bangsa yang bermartabat. Kemajuan suatu bangsa tidak hanya ditentukan oleh pertumbuhan ekonomi, perkembangan ilmu pengetahuan, penguasaan teknologi, maupun kekuatan politik dan pemerintahan, tetapi juga oleh kualitas moral manusia yang menjalankan kehidupan di dalamnya.",
+halaman: "pendidikan-moral.html"
+},
+    {
+id: "nusantara",
 judul: "Pembenahan Sistem Dan Budaya Moral Politik Indonesia",
 kategori: "Pemikiran Kebangsaan",
 penulis: "Dhimas Purnomo",
