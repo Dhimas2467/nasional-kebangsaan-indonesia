@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+
 /* KATALOG BUKU */
 
 .catalog-intro {
@@ -81,6 +82,15 @@ color: #252525;
 margin: 0 0 12px;
 }
 
+.book-title-link {
+color: inherit;
+text-decoration: none;
+}
+
+.book-title-link:hover {
+color: #98752e;
+}
+
 .book-author {
 font-size: 13px;
 color: #666;
@@ -91,33 +101,6 @@ font-size: 14px;
 line-height: 1.8;
 color: #444;
 text-align: justify;
-}
-
-.book-abstract {
-margin: 15px 0;
-border-top: 1px solid #e5dfd4;
-border-bottom: 1px solid #e5dfd4;
-padding: 12px 0;
-}
-
-.book-abstract summary {
-cursor: pointer;
-color: #98752e;
-font-size: 13px;
-font-weight: bold;
-}
-
-.abstract-content {
-padding-top: 15px;
-font-size: 14px;
-line-height: 1.8;
-color: #444;
-text-align: justify;
-}
-
-.abstract-content h3 {
-color: #98752e;
-text-align: center;
 }
 
 .read-more {
@@ -135,6 +118,12 @@ transition: 0.3s;
 
 .read-more:hover {
 background: #72551e;
+}
+
+.catalog-empty {
+text-align: center;
+padding: 25px;
+color: #777;
 }
 
 /* TAMPILAN MOBILE */
@@ -168,33 +157,34 @@ font-size: 10px;
 font-size: 12px;
 }
 
-.book-abstract summary {
-font-size: 11px;
-}
-
-.abstract-content {
-font-size: 12px;
-}
-
 .read-more {
 font-size: 11px;
 padding: 9px 12px;
 }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 <div class="header-inner">
+
 <div class="site-title">JERAT +62</div>
+
 <div class="site-tagline">
 Bersuara untuk Kebenaran. Bergerak untuk Keadilan.
 Berdiri untuk Kepentingan Rakyat.
 </div>
+
 </div>
 </header>
+
+<!-- NAVIGASI -->
 
 <nav>
 <div class="nav-inner">
@@ -209,6 +199,7 @@ title="Beranda">
 <path d="M5.5 9.5V21h13V9.5"></path>
 <path d="M9.5 21v-7h5v7"></path>
 </svg>
+
 </a>
 
 <a href="identitas.html">Identitas</a>
@@ -218,381 +209,26 @@ title="Beranda">
 </div>
 </nav>
 
+<!-- KONTEN UTAMA -->
+
 <main>
 
 <section class="content-section">
 <div class="container">
 
-<h2 class="section-title">Dokumentasi Karya Tulis</h2>
-
-<div class="catalog-grid">
-
-<!-- BUKU PERTAMA -->
-
-<article class="book-card">
-
-<div class="book-cover">
-<img
-src="musuh-besar.jpg"
-alt="Cover Musuh Besar Bangsa Indonesia"
-loading="eager">
-</div>
-
-<div class="book-info">
-
-<span class="book-category">
-Kedaulatan dan Kemandirian Bangsa
-</span>
-
-<h2>MUSUH BESAR BANGSA INDONESIA</h2>
-
-<p class="book-author">
-<strong>Penulis:</strong> Dhimas Purnomo
-</p>
-
-<p class="book-description">
-Buku ini membahas berbagai ancaman terhadap
-kemerdekaan, kedaulatan, dan kemandirian
-bangsa Indonesia dalam perkembangan dunia
-modern. Pembahasan meliputi neo imperialisme,
-neo kolonialisme, strategi neo divide et
-impera, penguasaan sumber daya alam, oligarki,
-korupsi, serta berbagai persoalan internal
-yang dapat melemahkan kekuatan bangsa.
-</p>
-
-<details class="book-abstract">
-<summary>BACA ABSTRAKSI LENGKAP</summary>
-
-<div class="abstract-content">
-
-<h3>ABSTRAKSI</h3>
-
-<p>
-MUSUH BESAR BANGSA INDONESIA membahas
-berbagai ancaman terhadap kemerdekaan,
-kedaulatan, dan kemandirian bangsa
-Indonesia dalam perkembangan dunia
-modern. Buku ini berangkat dari
-pemahaman bahwa berakhirnya penjajahan
-kolonial secara formal tidak dengan
-sendirinya menghilangkan seluruh
-bentuk penguasaan terhadap suatu
-bangsa. Perubahan sistem ekonomi,
-perkembangan teknologi, hubungan
-politik internasional, serta
-persaingan penguasaan sumber daya
-telah melahirkan bentuk-bentuk
-dominasi baru yang dapat membatasi
-kemampuan suatu negara menentukan
-arah kehidupannya sendiri.
-</p>
-
-<p>
-Pembahasan diawali dengan pemaknaan
-kemerdekaan dan kedaulatan Indonesia,
-kemudian menelusuri transformasi
-penjajahan dari penguasaan wilayah
-secara langsung menuju bentuk-bentuk
-dominasi yang berlangsung melalui
-sistem ekonomi, keuangan, perdagangan,
-teknologi, informasi, dan kebijakan
-politik. Konsep neo imperialisme dan
-neo kolonialisme digunakan untuk
-menjelaskan kemungkinan terjadinya
-penguasaan tanpa pendudukan langsung.
-Selanjutnya, buku ini membahas
-strategi <em>neo divide et impera</em>,
-yaitu pola pemecahan persatuan yang
-dapat dimanfaatkan untuk memperlemah
-kekuatan bangsa dan membuka ruang
-bagi kepentingan tertentu.
-</p>
-
-<p>
-Salah satu pokok utama buku ini adalah
-penguasaan sumber daya alam Indonesia.
-Kekayaan mineral, energi, hutan, tanah,
-laut, dan berbagai potensi ekonomi
-nasional memiliki nilai strategis,
-tetapi manfaatnya sangat bergantung
-pada tata kelola dan kemampuan bangsa
-mengolahnya. Ketergantungan terhadap
-modal, teknologi, pasar, industri,
-serta sistem keuangan dapat
-mempersempit ruang kebijakan apabila
-tidak diimbangi dengan penguatan
-kapasitas nasional. Oleh sebab itu,
-penguasaan sumber daya tidak hanya
-dibahas dari sisi kepemilikan dan
-produksi, tetapi juga dari aspek
-nilai tambah, penerimaan negara,
-perlindungan lingkungan, serta
-kesejahteraan masyarakat.
-</p>
-
-<p>
-Buku ini memberikan perhatian khusus
-terhadap ancaman yang berasal dari
-dalam negeri. Korupsi, penyalahgunaan
-jabatan, oligarki ekonomi dan politik,
-konflik kepentingan, serta kolusi
-antara kekuatan bisnis dan kekuasaan
-dapat mengalihkan kekayaan dan
-kewenangan negara dari tujuan
-kepentingan umum. Dalam konteks
-tersebut, istilah penjajahan oleh
-bangsa sendiri digunakan sebagai
-gambaran kritis terhadap praktik
-kekuasaan yang merugikan rakyat dan
-melemahkan amanat kemerdekaan.
-</p>
-
-<p>
-Pemaparan disusun dengan menggunakan
-peraturan perundang-undangan, data
-pemerintah, laporan lembaga
-internasional, laporan organisasi
-masyarakat sipil, dan literatur yang
-relevan. Sumber-sumber tersebut
-digunakan untuk mendukung penjelasan
-mengenai kondisi ekonomi, politik,
-sosial, pengelolaan sumber daya,
-korupsi, dan hubungan internasional.
-Fakta, penilaian, serta kesimpulan
-dibedakan agar pembahasan tidak
-terjebak pada generalisasi atau
-tuduhan yang tidak memiliki dasar
-memadai.
-</p>
-
-<p>
-Pada bagian akhir, buku ini
-menawarkan arah pemikiran untuk
-membangun kembali kedaulatan dan
-kemandirian Indonesia melalui
-penguatan industri dan teknologi
-nasional, kemandirian pangan dan
-energi, reformasi tata kelola
-ekonomi dan politik, pemberantasan
-korupsi, perlindungan hak rakyat,
-serta penguatan persatuan nasional.
-Secara keseluruhan, buku ini
-menegaskan bahwa kemerdekaan harus
-diwujudkan dalam kemampuan nyata
-bangsa untuk mengelola kekayaan,
-menentukan kebijakan, melindungi
-rakyat, dan menjaga kepentingan
-nasional.
-</p>
-
-<h3>Kata Kunci</h3>
-
-<p>
-Kemerdekaan, kedaulatan nasional,
-neo imperialisme, neo kolonialisme,
-sumber daya alam, oligarki, korupsi,
-perpecahan bangsa, kemandirian
-nasional.
-</p>
-
-</div>
-</details>
-
-<a
-class="read-more"
-href="https://drive.google.com/file/d/1ljONbdB1vWF99myydg7o1azlwaqaHVbN/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer">
-BACA BUKU (PDF) →
-</a>
-
-</div>
-</article>
-
-
-<!-- BUKU KEDUA -->
-
-<article class="book-card">
-
-<div class="book-cover">
-<img
-src="krisis-moral.jpg"
-alt="Cover Krisis Moralitas dalam Kehidupan Politik Indonesia"
-loading="eager">
-</div>
-
-<div class="book-info">
-
-<span class="book-category">
-Kedaulatan dan Kemandirian Bangsa
-</span>
-
-<h2>
-KRISIS MORALITAS DALAM KEHIDUPAN
-POLITIK INDONESIA
+<h2 class="section-title">
+Dokumentasi Karya Tulis
 </h2>
 
-<p class="book-author">
-<strong>Penulis:</strong> Dhimas Purnomo
-</p>
+<!-- DAFTAR BUKU OTOMATIS -->
 
-<p class="book-description">
-Krisis moral dalam kehidupan politik
-Indonesia merupakan persoalan mendasar
-yang tidak dapat dipahami hanya melalui
-kelemahan sistem pemerintahan,
-ketidaksempurnaan peraturan perundang-
-undangan, atau dinamika persaingan
-kekuasaan. Di balik berbagai persoalan
-politik terdapat persoalan manusia yang
-menjalankan kekuasaan, menentukan
-kebijakan, mengelola kewenangan, dan
-mengambil keputusan yang mempengaruhi
-kehidupan masyarakat.
-</p>
+<div class="catalog-grid" id="daftar-buku">
 
-<details class="book-abstract">
-<summary>BACA ABSTRAKSI LENGKAP</summary>
-
-<div class="abstract-content">
-
-<h3>ABSTRAKSI</h3>
-
-<p>
-KRISIS MORALITAS DALAM KEHIDUPAN
-POLITIK INDONESIA membahas
-persoalan moralitas sebagai
-salah satu persoalan mendasar
-dalam kehidupan politik dan
-penyelenggaraan pemerintahan.
-Kehidupan politik tidak hanya
-berkaitan dengan sistem kekuasaan,
-peraturan perundang-undangan,
-lembaga negara, dan mekanisme
-pemerintahan, tetapi juga
-menyangkut kualitas moral manusia
-yang menjalankan kewenangan dan
-menentukan arah kebijakan publik.
-</p>
-
-<p>
-Kekuasaan pada hakikatnya
-merupakan amanat yang harus
-dijalankan dengan tanggung jawab.
-Kewenangan yang dimiliki oleh
-penyelenggara negara seharusnya
-digunakan untuk melindungi
-kepentingan masyarakat,
-mewujudkan keadilan, dan
-meningkatkan kesejahteraan
-rakyat. Namun, ketika kekuasaan
-lebih banyak diarahkan untuk
-kepentingan pribadi, kelompok,
-atau golongan tertentu, kehidupan
-politik dapat kehilangan
-landasan moralnya.
-</p>
-
-<p>
-Pembahasan buku ini mencakup
-hakikat moralitas dalam kehidupan
-politik, hubungan antara
-kekuasaan dan tanggung jawab,
-integritas penyelenggara negara,
-kejujuran dalam menjalankan
-kewenangan, serta berbagai
-bentuk penyimpangan moral
-yang dapat merusak kehidupan
-demokrasi. Korupsi, penyalahgunaan
-jabatan, konflik kepentingan,
-politik transaksional, manipulasi
-kepentingan publik, dan
-penyalahgunaan kepercayaan
-masyarakat menjadi bagian
-dari persoalan yang dibahas.
-</p>
-
-<p>
-Buku ini juga menempatkan
-masyarakat sebagai bagian
-penting dalam kehidupan politik.
-Kesadaran politik, tanggung
-jawab warga negara, keberanian
-menyampaikan kebenaran, serta
-kemampuan menilai tindakan
-kekuasaan berdasarkan
-pertimbangan moral merupakan
-unsur yang diperlukan dalam
-menjaga kehidupan demokrasi.
-Masyarakat tidak seharusnya
-hanya menjadi objek kebijakan,
-tetapi juga memiliki tanggung
-jawab dalam mengawasi dan
-menjaga arah penyelenggaraan
-kehidupan bernegara.
-</p>
-
-<p>
-Pemaparan selanjutnya diarahkan
-pada hubungan antara kesadaran
-moral dan kualitas kehidupan
-politik. Perubahan kehidupan
-politik tidak cukup hanya
-dilakukan melalui pergantian
-pemimpin, pembentukan peraturan
-baru, atau perubahan struktur
-kelembagaan. Perubahan tersebut
-membutuhkan kesadaran moral
-yang tercermin dalam pikiran,
-sikap, keputusan, dan tindakan
-manusia yang terlibat di dalamnya.
-</p>
-
-<p>
-Secara keseluruhan, buku ini
-menegaskan bahwa moralitas
-merupakan landasan penting
-dalam kehidupan politik.
-Kekuasaan harus dijalankan
-dengan integritas, tanggung
-jawab, kejujuran, dan
-keberpihakan pada kepentingan
-rakyat. Kehidupan politik yang
-bermartabat hanya dapat
-diwujudkan apabila kesadaran
-moral menjadi dasar dalam
-menjalankan kekuasaan,
-menentukan kebijakan, dan
-membangun hubungan antara
-negara dan masyarakat.
-</p>
-
-<h3>Kata Kunci</h3>
-
-<p>
-Moralitas politik, kesadaran
-moral, kekuasaan, tanggung jawab,
-integritas, demokrasi, korupsi,
-etika politik, kepentingan rakyat.
+<p class="catalog-empty">
+Memuat katalog buku...
 </p>
 
 </div>
-</details>
-
-<a
-class="read-more"
-href="https://drive.google.com/file/d/1IO7MyIQQ3cj6HEtYMOSEXqB1VapXii2N/view?usp=drivesdk"
-target="_blank"
-rel="noopener noreferrer">
-BACA BUKU (PDF) →
-</a>
-
-</div>
-</article>
-
-</div>
-
 
 <!-- PENUTUP -->
 
@@ -610,7 +246,6 @@ Ruang penyampaian aspirasi dan pemikiran kritis masyarakat Indonesia dalam mempe
 </section>
 
 </main>
-
 
 <!-- FOOTER -->
 
@@ -630,7 +265,6 @@ Persatuan · Kedaulatan · Kemandirian Bangsa
 
 </footer>
 
-
 <!-- BACK TO TOP -->
 
 <a
@@ -645,6 +279,76 @@ title="Kembali ke atas">
 </svg>
 
 </a>
+
+<!-- JAVASCRIPT KATALOG -->
+
+<script src="daftar-buku.js"></script>
+
+<script>
+
+const katalog = document.getElementById("daftar-buku");
+
+if (typeof daftarBuku !== "undefined" && daftarBuku.length > 0) {
+
+katalog.innerHTML = daftarBuku.map(buku => `
+
+<article class="book-card">
+
+<div class="book-cover">
+
+<a href="${buku.halaman}">
+<img
+src="${buku.sampul}"
+alt="Sampul ${buku.judul}"
+loading="lazy">
+</a>
+
+</div>
+
+<div class="book-info">
+
+<span class="book-category">
+${buku.kategori}
+</span>
+
+<h2>
+<a class="book-title-link"
+href="${buku.halaman}">
+${buku.judul}
+</a>
+</h2>
+
+<p class="book-author">
+<strong>Penulis:</strong> ${buku.penulis}
+</p>
+
+<p class="book-description">
+${buku.deskripsi}
+</p>
+
+<a
+class="read-more"
+href="${buku.halaman}">
+LIHAT DETAIL BUKU →
+</a>
+
+</div>
+
+</article>
+
+`).join("");
+
+} else {
+
+katalog.innerHTML = `
+<p class="catalog-empty">
+Belum ada buku yang ditambahkan ke katalog.
+</p>
+`;
+
+}
+
+</script>
 
 <script src="bagikan.js"></script>
 
